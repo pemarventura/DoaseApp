@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DoaseApp.Server.props" />
+</Project>

@@ -1,0 +1,49 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h1>Login</h1>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+
+<div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" @bind-value="username">
+</div>
+
+<div class="form-group">
+    <label for="password">Senha:</label>
+    <input type="password" class="form-control" id="password" @bind-value="password">
+</div>
+
+<button type="submit" class="btn btn-primary" style="margin-top: 10px;" @onclick="Login">Login</button>
+
+<p style="margin-top: 10px;">Ainda não registrado? <a href="/cadastro" @onclick="Register">Clique aqui</a></p>
+
+@code {
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    private void Login()
+    {
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            errorMessage = "Please enter a username and password.";
+        }
+        else
+        {
+            // Perform login logic here
+            // You can use authentication libraries such as Microsoft.AspNetCore.Authentication
+        }
+    }
+
+    private void Register()
+    {
+        NavigationManager.NavigateTo("/cadastro");
+    }
+}
