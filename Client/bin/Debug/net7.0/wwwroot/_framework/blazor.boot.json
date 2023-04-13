@@ -201,14 +201,14 @@
       "netstandard.dll": "sha256-kj5cBXzwPYC+HD+P8+6VybY34JtEzjXjMIHXEI3hIiM=",
       "System.Private.CoreLib.dll": "sha256-Awk1lCiFfH7r9AAZfBtGqS8rhv6UJ5lUu3yF6HDH3tQ=",
       "DoaseApp.Shared.dll": "sha256-KUij0MB38EsO+tcJ1xf9MpTrBSdJjGcKIKU8d3PiycI=",
-      "DoaseApp.Client.dll": "sha256-tvgmiDVVPUGn\/xi4+Ru5sy2cZXvtrYeZ3Go9+F0IiC4="
+      "DoaseApp.Client.dll": "sha256-Xsza\/CcjcoCSSZOZ+6H5ylGoWtvT8oRccPeUBO4Lra4="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "DoaseApp.Shared.pdb": "sha256-joZohlbsUFqoxffJycK5eBL0gtw5xQ9L9pClH7VG6GI=",
-      "DoaseApp.Client.pdb": "sha256-7s3qzgc0gvkkkFcBPse4sFnOTXZ1+NTKnQCEvfhToeM="
+      "DoaseApp.Client.pdb": "sha256-Tt5G3zrL7idgtQqE411k8hoiVKgvpUjmdJb4rq1zni8="
     },
     "runtime": {
       "dotnet.7.0.0.2ktwsbh9vg.js": "sha256-2jNLve8W0sST0LAebgAc1IwSnGhkbjOKO8QPWWiJssI=",

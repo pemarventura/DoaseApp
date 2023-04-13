@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XfdmdmwkN/0JqmU+iE5pttc1+QVv3L5W37xklHnn0k4=",
+  "Hash": "HZGgQMr+N1MMvSJU51ph5mZITKZ+Xus+hpPnU/4BUr4=",
   "Source": "DoaseApp.Server",
   "BasePath": "_content/DoaseApp.Server",
   "Mode": "Default",
@@ -7320,6 +7320,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-512.png"
+    },
+    {
+      "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\images\\doase.png",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/doase.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\doase.png"
     },
     {
       "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\index.html",

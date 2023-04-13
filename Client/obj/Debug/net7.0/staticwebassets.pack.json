@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\doase.png",
+      "PackagePath": "staticwebassets\\doase.png"
+    },
+    {
       "Id": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
@@ -79,6 +83,10 @@
     {
       "Id": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\icon-512.png",
       "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\images\\doase.png",
+      "PackagePath": "staticwebassets\\images\\doase.png"
     },
     {
       "Id": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\index.html",

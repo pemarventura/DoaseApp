@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0wum9m6J6INapcjqll1es4Pof33Ven90py6CQl+ey50=",
+  "Hash": "NPSLIAGhUupZtD8IPEk5xTsK0BrncTYaYi3kQ+NQLvQ=",
   "Source": "DoaseApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7310,6 +7310,23 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
+      "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\doase.png",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "doase.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\doase.png"
+    },
+    {
       "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\favicon.png",
       "SourceId": "DoaseApp.Client",
       "SourceType": "Discovered",
@@ -7359,6 +7376,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-512.png"
+    },
+    {
+      "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\images\\doase.png",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/doase.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\doase.png"
     },
     {
       "Identity": "D:\\PEMAR\\Desktop\\DoaseApp\\Client\\wwwroot\\index.html",

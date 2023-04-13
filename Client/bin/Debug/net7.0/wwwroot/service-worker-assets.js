@@ -49,6 +49,10 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
+      "hash": "sha256-PwQPYsIQrm\/4aUa0tqN+SUsPPg31W1klrJRNNT3ih0I=",
+      "url": "doase.png"
+    },
+    {
       "hash": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "url": "favicon.png"
     },
@@ -61,11 +65,15 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-gTvdbAxyJEx+MX8gTfbjljycjYzUTmw1JDb1zXFe8tA=",
+      "hash": "sha256-PwQPYsIQrm\/4aUa0tqN+SUsPPg31W1klrJRNNT3ih0I=",
+      "url": "images\/doase.png"
+    },
+    {
+      "hash": "sha256-WX4hZZIuEnv1qVgif0g5k+a4u3YlpCxFtlicZwS66vs=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-tRaQzCEih8q\/wy\/HfQv56zl4+XpyeqpO5hRf5VpzDOQ=",
+      "hash": "sha256-o3efoGYwrFeVMZVubmuMs+vUgoyuVbihjFg0a3MRWcw=",
       "url": "manifest.json"
     },
     {
@@ -881,11 +889,11 @@
       "url": "_framework\/DoaseApp.Shared.pdb"
     },
     {
-      "hash": "sha256-JYtdApSyr4R5iJGDuZXAfYAPSUC+giRxGkTQzbrIBxU=",
+      "hash": "sha256-Xsza\/CcjcoCSSZOZ+6H5ylGoWtvT8oRccPeUBO4Lra4=",
       "url": "_framework\/DoaseApp.Client.dll"
     },
     {
-      "hash": "sha256-ScpTtr5Zgh1YpncERrkk77gb0BMgpFtMxlh5M7ujmvE=",
+      "hash": "sha256-Tt5G3zrL7idgtQqE411k8hoiVKgvpUjmdJb4rq1zni8=",
       "url": "_framework\/DoaseApp.Client.pdb"
     },
     {
@@ -893,9 +901,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-9ZeXgUL54wTvtWBOl61t3BzXPVVbWFo+zuoNyV3Ro0I=",
+      "hash": "sha256-+VQ7OHtUZdy8zRqUkY0\/ogp9hTmTADvyCKMD6ZZ2UeM=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "mxlYKanP"
+  "version": "JQ7lsqJM"
 };
