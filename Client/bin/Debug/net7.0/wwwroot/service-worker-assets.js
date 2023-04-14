@@ -77,7 +77,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-QYh7O3MshGlao6gdoAssXE1wCcvqG2BGMThIjbWgE9M=",
+      "hash": "sha256-\/uEvazeI\/XePNFykx3I1TpR+SCn3kDTrS85aWaVDq8o=",
       "url": "DoaseApp.Client.styles.css"
     },
     {
@@ -905,5 +905,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "JQ7lsqJM"
+  "version": "iYk9cy6t"
 };
