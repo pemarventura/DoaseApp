@@ -83,6 +83,15 @@ main[b-z68tsfbarx] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+
+    .card[b-z68tsfbarx] {
+        background-color: #e7f3fe;
+        border-color: #b8daff;
+        border-radius: .25rem;
+        border-width: 1px;
+        border-style: solid;
+        padding: 1rem;
+    }
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-0ovawyrq4k] {

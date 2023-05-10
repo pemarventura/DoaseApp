@@ -12,86 +12,114 @@
     <p>Seus dados foram salvos com sucesso!</p>
 }
 
-<EditForm Model="@person" OnValidSubmit="@SaveUserData">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <InputText id="name" class="form-control" @bind-Value="@person.FirstName" required />
-                <ValidationMessage For="@(() => person.FirstName)" />
-            </div>
-
-            <div class="form-group">
-                <label for="last-name">Sobrenome:</label>
-                <InputText id="last-name" class="form-control" @bind-Value="@person.LastName" required />
-                <ValidationMessage For="@(() => person.LastName)" />
-            </div>
-
-            <div class="form-group">
-                <label for="date-of-birth">Data de nascimento:</label>
-                <InputDate id="date-of-birth" class="form-control" @bind-Value="@person.DateOfBirth" required />
-                <ValidationMessage For="@(() => person.DateOfBirth)" />
-            </div>
-
-            <div class="form-group">
-                <label for="phone-number">Email:</label>
-                <InputText id="phone-number" class="form-control" @bind-Value="@person.Email" required />
-                <ValidationMessage For="@(() => person.Email)" />
-            </div>
-
-            <div class="form-group">
-                <label for="phone-number">Telefone:</label>
-                <InputText id="phone-number" class="form-control" @bind-Value="@person.PhoneNumber" required />
-                <ValidationMessage For="@(() => person.PhoneNumber)" />
-            </div>
+@if (!showForm)
+{
+   <div class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-center">
+      <form class="form-inline">
+        <div class="form-check form-check-inline mr-4">
+          <input class="form-check-input" type="radio" name="option" id="option1" valor="1" @bind-value="@selectedOption">
+          <label class="form-check-label" for="option1">Option 1</label>
         </div>
-
-        <div class="col-md-6">
-
-            <div class="form-group">
-                <label for="state">Estado:</label>
-                <InputSelect id="state" class="form-control" @bind-Value="@person.State" required>
-                    @foreach (var state in Enum.GetValues(typeof(BrazilianState)))
-                    {
-                        <option value="@state">@state</option>
-                    }
-                </InputSelect>
-                <ValidationMessage For="@(() => person.State)" />
-            </div>
-
-            <div class="form-group">
-                <label for="address">Cidade:</label>
-                <InputText id="address" class="form-control" @bind-Value="@person.City" required />
-                <ValidationMessage For="@(() => person.City)" />
-            </div>
-
-            <div class="form-group">
-                <label for="address">Bairro:</label>
-                <InputText id="address" class="form-control" @bind-Value="@person.Neighborhood" required />
-                <ValidationMessage For="@(() => person.Neighborhood)" />
-            </div>
-
-            <div class="form-group">
-                <label for="address">Endereço:</label>
-                <InputText id="address" class="form-control" @bind-Value="@person.Address" required />
-                <ValidationMessage For="@(() => person.Address)" />
-            </div>
-
-            <div class="form-group">
-                <label for="address">CEP:</label>
-                <InputText id="address" class="form-control" @bind-Value="@person.CEP" required />
-                <ValidationMessage For="@(() => person.CEP)" />
-            </div>
-
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="option" id="option2" valor="2" @bind-value="@selectedOption">
+          <label class="form-check-label" for="option2">Option 2</label>
         </div>
+        <div class="mt-4 text-center">
+          <button type="submit" class="btn btn-primary ml-3" @onclick="@ShowForm" style="margin-top: 10px;">Submit</button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
 
-    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar</button>
+}
 
-</EditForm>
+else
+{
+    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <InputText id="name" class="form-control" @bind-Value="@person.FirstName" required />
+                    <ValidationMessage For="@(() => person.FirstName)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Sobrenome:</label>
+                    <InputText id="last-name" class="form-control" @bind-Value="@person.LastName" required />
+                    <ValidationMessage For="@(() => person.LastName)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="date-of-birth">Data de nascimento:</label>
+                    <InputDate id="date-of-birth" class="form-control" @bind-Value="@person.DateOfBirth" required />
+                    <ValidationMessage For="@(() => person.DateOfBirth)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-number">Email:</label>
+                    <InputText id="phone-number" class="form-control" @bind-Value="@person.Email" required />
+                    <ValidationMessage For="@(() => person.Email)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-number">Telefone:</label>
+                    <InputText id="phone-number" class="form-control" @bind-Value="@person.PhoneNumber" required />
+                    <ValidationMessage For="@(() => person.PhoneNumber)" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label for="state">Estado:</label>
+                    <InputSelect id="state" class="form-control" @bind-Value="@person.State" required>
+                        @foreach (var state in Enum.GetValues(typeof(BrazilianState)))
+                        {
+                            <option value="@state">@state</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => person.State)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Cidade:</label>
+                    <InputText id="address" class="form-control" @bind-Value="@person.City" required />
+                    <ValidationMessage For="@(() => person.City)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Bairro:</label>
+                    <InputText id="address" class="form-control" @bind-Value="@person.Neighborhood" required />
+                    <ValidationMessage For="@(() => person.Neighborhood)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Endereço:</label>
+                    <InputText id="address" class="form-control" @bind-Value="@person.Address" required />
+                    <ValidationMessage For="@(() => person.Address)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">CEP:</label>
+                    <InputText id="address" class="form-control" @bind-Value="@person.CEP" required />
+                    <ValidationMessage For="@(() => person.CEP)" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar</button>
+        </div>
+    </EditForm>
+}
 
 
 @if (names != null && names.Any())
@@ -111,6 +139,9 @@
     private Person person = new Person();
     public bool isSaved = false;
     private List<string> names;
+    private string selectedOption;
+    private bool canSubmitOption = false;
+    private bool showForm = false;
 
     private async Task SaveUserData()
     {
@@ -121,5 +152,16 @@
     private async Task GetNames()
     {
         names = await httpClient.GetFromJsonAsync<List<string>>("api/person");
+    }
+
+    private void HandleOptionChange(string value)
+    {
+        selectedOption = value;
+        canSubmitOption = true;
+    }
+
+    private void ShowForm()
+    {
+        showForm = true;
     }
 }

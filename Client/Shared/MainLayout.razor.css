@@ -82,4 +82,13 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+
+    .card {
+        background-color: #e7f3fe;
+        border-color: #b8daff;
+        border-radius: .25rem;
+        border-width: 1px;
+        border-style: solid;
+        padding: 1rem;
+    }
 }
