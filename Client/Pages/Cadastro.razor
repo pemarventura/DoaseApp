@@ -8,7 +8,7 @@
 
 <h1 style="text-align:center;">Cadastro de Usuário</h1>
 
-@if (!showForm1 && !showForm2 && !isSaved)
+@if (!showForm1 && !showForm2 && !isSubmitted)
 {
     <div class="d-flex justify-content-center">
         <div class="card bg-light p-5" >
@@ -37,7 +37,7 @@
 
 @if (showForm1)
 {
-    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+    <EditForm Model="@person" OnSubmit="@SubmitForm">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
@@ -111,7 +111,7 @@
 
 @if (showForm2)
 {
-    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+    <EditForm Model="@person" OnSubmit="@SubmitForm">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
@@ -194,7 +194,7 @@
     </EditForm>
 }
 
-@if (isSaved && showForm3 == false)
+@if (isSubmitted && showForm3 == false)
 {
     <div class="d-flex justify-content-center">
         <div class="card bg-light p-5">
@@ -209,7 +209,7 @@
     </div>
 }
 
-@if (showForm3)
+@*@if (showForm3)
 {
     <div class="d-flex justify-content-center mt-4">
         <div class="card bg-light p-5">
@@ -226,7 +226,7 @@
             </div>
         </div>
     </div>
-}
+}*@
 
 @if (names != null && names.Any())
 {
@@ -243,6 +243,7 @@
 
 @code {
     private Person person = new Person();
+    public bool isSubmitted = false;
     public bool isSaved = false;
     private List<string> names;
 
@@ -294,6 +295,16 @@
         var attributes = (DescriptionAttribute[])fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false);
 
         return attributes.Length > 0 ? attributes[0].Description : value.ToString();
+    }
+
+    private async Task SubmitForm()
+    {
+        // Add any desired logic here to process the form data
+        // ...
+
+        showForm1 = false;
+        showForm2 = false;
+        isSubmitted = true;
     }
     
 }
