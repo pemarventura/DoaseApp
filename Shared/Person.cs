@@ -21,7 +21,5 @@ namespace DoaseApp.Shared
         public DateOnly DateOfBirth { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
 
-
-
     }
 }

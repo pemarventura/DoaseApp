@@ -12,7 +12,7 @@
     <p>Seus dados foram salvos com sucesso!</p>
 }
 
-@if (!showForm)
+@if (!showForm1 && !showForm2)
 {
     <div class="d-flex justify-content-center">
         <div class="card" style="background: #7ed957; width: 70%;">
@@ -20,12 +20,12 @@
                 <div class="d-flex justify-content-center">
                     <form class="form-inline">
                         <div class="form-check form-check-inline mr-4">
-                            <input class="form-check-input" type="radio" name="option" id="option1" valor="1" @bind-value="@selectedOption">
-                            <label class="form-check-label" for="option1">Option 1</label>
+                            <input class="form-check-input" type="radio" name="option" id="option1" value="1" checked="@selectedOption == '1'" @onclick="() => selectedOption = '1'">
+                            <label class="form-check-label" for="option1">Pessoa Jurídica</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="option" id="option2" valor="2" @bind-value="@selectedOption">
-                            <label class="form-check-label" for="option2">Option 2</label>
+                            <input class="form-check-input" type="radio" name="option" id="option2" value="2" checked="@selectedOption == '2'" @onclick="() => selectedOption = '2'">
+                            <label class="form-check-label" for="option2">Pessoa Física</label>
                         </div>
                         <div class="mt-4 text-center">
                             <button type="submit" class="btn btn-primary ml-3" @onclick="@ShowForm" style="margin-top: 10px;">Submit</button>
@@ -34,11 +34,13 @@
                 </div>
             </div>
         </div>
- </div>
-
+    </div>
 }
 
-else
+
+
+
+@if (showForm1)
 {
     <EditForm Model="@person" OnValidSubmit="@SaveUserData">
         <DataAnnotationsValidator />
@@ -141,9 +143,10 @@ else
     private Person person = new Person();
     public bool isSaved = false;
     private List<string> names;
-    private string selectedOption;
-    private bool canSubmitOption = false;
-    private bool showForm = false;
+
+    char selectedOption = ' '; // Variable to store the selected option
+    bool showForm1 = false; // Flag to show/hide form 1
+    bool showForm2 = false; // Flag to show/hide form 2
 
     private async Task SaveUserData()
     {
@@ -156,14 +159,18 @@ else
         names = await httpClient.GetFromJsonAsync<List<string>>("api/person");
     }
 
-    private void HandleOptionChange(string value)
-    {
-        selectedOption = value;
-        canSubmitOption = true;
-    }
-
     private void ShowForm()
     {
-        showForm = true;
+        if (selectedOption == '1')
+        {
+            showForm1 = true;
+            showForm2 = false;
+        }
+        else if (selectedOption == '2')
+        {
+            showForm1 = false;
+            showForm2 = true;
+        }
     }
+    
 }
