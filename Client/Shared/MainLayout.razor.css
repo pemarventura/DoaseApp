@@ -9,7 +9,7 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, #ffde59 0%, #7ed957 16.67%, #004ad3 33.33%, #0cc0df 50%, #993399 66.67%, #ff3131 83.33%);
+    background: rgba(49,133,164,1);
 }
 
 .top-row {
@@ -21,6 +21,16 @@ main {
     align-items: center;
 }
 
+    /*
+.cartao {
+    background-color: #e7f3fe;
+    border-color: #b8daff;
+    border-radius: .25rem;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1rem;
+}
+    */
     .top-row ::deep a, .top-row ::deep .btn-link {
         white-space: nowrap;
         margin-left: 1.5rem;
@@ -83,12 +93,5 @@ main {
         padding-right: 1.5rem !important;
     }
 
-    .card {
-        background-color: #e7f3fe;
-        border-color: #b8daff;
-        border-radius: .25rem;
-        border-width: 1px;
-        border-style: solid;
-        padding: 1rem;
-    }
+
 }
