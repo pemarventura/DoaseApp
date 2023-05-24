@@ -1,0 +1,30 @@
+﻿@page "/registrado-page"
+@inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.WebUtilities
+
+
+<h3>Welcome to the Registered Page</h3>
+
+<p>Email: @Email</p>
+<p>Password: @Password</p>
+
+<button @onclick="NavigateToLoginPage">Go Back to Login Page</button>
+
+@code {
+    [Parameter] public string Email { get; set; }
+    [Parameter] public string Password { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        var queryParameters = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+        Email = queryParameters["email"];
+        Password = queryParameters["password"];
+    }
+
+    private void NavigateToLoginPage()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

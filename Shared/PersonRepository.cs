@@ -10,9 +10,9 @@ namespace DoaseApp.Shared
     {
         private readonly List<Person> _persons = new List<Person>();
 
-        public IEnumerable<string> GetNames()
+        public IEnumerable<Person> GetAll()
         {
-            return _persons.Select(person => person.FirstName);
+            return _persons.Select(person => person);
         }
 
         public void AddPerson(Person person)

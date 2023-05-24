@@ -16,9 +16,9 @@ namespace DoaseApp.Server.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Person> Get()
         {
-            return _repository.GetNames();
+            return _repository.GetAll();
         }
 
         [HttpPost]
