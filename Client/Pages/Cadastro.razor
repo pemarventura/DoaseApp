@@ -5,10 +5,11 @@
 @using System.ComponentModel;
 @inject HttpClient httpClient
 @inject IPersonRepository PersonRepository
+@inject NavigationManager NavigationManager
 
 <h1 style="text-align:center;">Cadastro de Usuário</h1>
 
-@if (!showForm1 && !showForm2 && !isSaved)
+@if (!showForm1 && !showForm2 && !showForm3 && !isSubmitted)
 {
     <div class="d-flex justify-content-center">
         <div class="card bg-light p-5" >
@@ -37,7 +38,7 @@
 
 @if (showForm1)
 {
-    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+    <EditForm Model="@person" OnSubmit="@SubmitFormJuridica">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
@@ -45,7 +46,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="name">Empresa:</label>
-                    <InputText id="name" class="form-control" @bind-Value="@person.NomeEmpresa" required />
+                    <InputText id="name" class="form-control" @bind-Value="@person.FirstName" required />
                     <ValidationMessage For="@(() => person.FirstName)" />
                 </div>
 
@@ -111,7 +112,7 @@
 
 @if (showForm2)
 {
-    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+    <EditForm Model="@person" OnSubmit="@SubmitFormFisica">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
@@ -194,57 +195,70 @@
     </EditForm>
 }
 
-@if (isSaved && showForm3 == false)
+@if (showForm3)
+{
+    <EditForm Model="@person" OnValidSubmit="@SaveUserData">
+        <div class="d-flex justify-content-center mt-4">
+            <div class="card bg-light p-5">
+                <div class="card-body">
+                    <div class="text-center">
+                        <p>
+                            <strong class="font-italic">Informe seu email e sua senha,</strong>
+                            <strong class="font-weight-bold">estes devem ser usados para acessar o sistema.</strong>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input id="email" class="form-control form-control-sm" @bind="@person.Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input id="senha" class="form-control form-control-sm" type="password" @bind="@person.Senha">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary btn-margin">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+
+}
+
+@if (isSubmitted && showForm3 == false)
 {
     <div class="d-flex justify-content-center">
         <div class="card bg-light p-5">
             <div class="card-body d-flex flex-column align-items-center">
                 <p>Seus dados foram salvos com sucesso!</p>
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary mr-2" @onclick="@ResetForm">Voltar</button>
-                    <button type="button" class="btn btn-primary" @onclick="@ShowForm2">Continuar</button>
+                <div class="d-flex justify-content-center mb-8">
+                    <button type="button" class="btn btn-primary mx-2" @onclick="@ResetForm">Voltar</button>
+                    <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToIndex">Continuar</button>
                 </div>
             </div>
         </div>
     </div>
 }
 
-@if (showForm3)
-{
-    <div class="d-flex justify-content-center mt-4">
-        <div class="card bg-light p-5">
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input id="email" class="form-control" @bind="@person.Email">
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input id="senha" class="form-control" type="password" @bind="@person.Senha">
-                </div>
-                <button type="button" class="btn btn-primary" @onclick="@SubmitForm2">Finalizar</button>
-            </div>
-        </div>
-    </div>
-}
 
-@if (names != null && names.Any())
+@if (persons != null && persons.Any())
 {
     <h2>Nomes Cadastrados:</h2>
     <ul>
-        @foreach (var name in names)
+        @foreach (var person in persons)
         {
-            <li>@name</li>
+            <li>@($"{person.Email} - {person.Senha}")</li>
         }
     </ul>
 }
 
-@*<button type="button" class="btn btn-secondary" @onclick="@GetNames" style="margin-top: 10px;">Mostrar Nomes</button>*@
+<button type="button" class="btn btn-secondary" @onclick="@GetAll" style="margin-top: 10px;">Mostrar Nomes</button>
 
 @code {
     private Person person = new Person();
+    public bool isSubmitted = false;
     public bool isSaved = false;
-    private List<string> names;
+    private IEnumerable<Person> persons;
 
     char selectedOption = ' '; // Variable to store the selected option
     bool showForm1 = false; // Flag to show/hide form 1
@@ -253,15 +267,15 @@
 
     private async Task SaveUserData()
     {
+        showForm3 = false;
+        isSubmitted = true;
         await httpClient.PostAsJsonAsync("api/person", person);
-        isSaved = true;
-        showForm1 = false;
-        showForm2 = false;
+
     }
 
-    private async Task GetNames()
+    private async Task GetAll()
     {
-        names = await httpClient.GetFromJsonAsync<List<string>>("api/person");
+        persons = await httpClient.GetFromJsonAsync <IEnumerable<Person>> ("api/person/all");
     }
 
     private void ShowForm()
@@ -285,7 +299,10 @@
 
     private void ResetForm()
     {
-        isSaved = false;
+        isSubmitted = false;
+        showForm1 = false;
+        showForm2 = false;
+        showForm3 = false;
     }
 
     static string GetEnumDescription(Enum value)
@@ -295,5 +312,34 @@
 
         return attributes.Length > 0 ? attributes[0].Description : value.ToString();
     }
+
+    private void SubmitFormJuridica()
+    {
+        // Add any desired logic here to process the form data
+        // ...
+
+        showForm1 = false;
+        showForm2 = false;
+        showForm3 = true;
+
+    }
+
+    private void SubmitFormFisica()
+    {
+        // Add any desired logic here to process the form data
+        // ...
+
+        showForm1 = false;
+        showForm2 = false;
+        showForm3 = true;
+        person.CriaCampanha = true;
+
+    }
     
+    private void NavigateToIndex()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+
 }

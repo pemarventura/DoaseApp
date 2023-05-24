@@ -15,10 +15,16 @@ namespace DoaseApp.Server.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("all")]
+        public IEnumerable<Person> Get()
         {
-            return _repository.GetNames();
+            return _repository.GetAll();
+        }
+
+        [HttpGet("byEmail")]
+        public Person GetUserByEmail(string email)
+        {
+            return _repository.GetUserByEmail(email);
         }
 
         [HttpPost]

@@ -25,7 +25,7 @@ namespace DoaseApp.Shared
         public string? Senha { get; set; }
         public DateOnly DateOfBirth { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
-        public bool CriaCampanha { get; set; }
+        public bool CriaCampanha { get; set; } = false;
 
     }
 }

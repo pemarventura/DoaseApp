@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoaseApp.Server", "Server\DoaseApp.Server.csproj", "{83102CDA-D1B8-4015-9500-90EF797FDD98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoaseApp.Server", "Server\DoaseApp.Server.csproj", "{83102CDA-D1B8-4015-9500-90EF797FDD98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoaseApp.Client", "Client\DoaseApp.Client.csproj", "{572E6350-FF9D-4573-B27B-560182C3F7C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoaseApp.Client", "Client\DoaseApp.Client.csproj", "{572E6350-FF9D-4573-B27B-560182C3F7C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoaseApp.Shared", "Shared\DoaseApp.Shared.csproj", "{6CFD1ED6-3055-46F2-9EA9-03B6A3D6DA0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoaseApp.Shared", "Shared\DoaseApp.Shared.csproj", "{6CFD1ED6-3055-46F2-9EA9-03B6A3D6DA0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
