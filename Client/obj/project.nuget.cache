@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A53OPfJI9iZnXPgp1e9ZLgEnh9rWM4JWsi9p3P9Bc4wiqv8leqm6L0wrFY+zQ0Jq8xTOl/81H/qmYe31hGpJDw==",
+  "dgSpecHash": "nWrhLin/c4bDnFZ53t2ISsqo+8KlargtgztTopPEWqyaA3txqDTx1PUd7K4tsthCxTnogs+1l9+x9IJB6/i+vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\DoaseApp.Client.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.4\\microsoft.aspnetcore.components.webassembly.7.0.4.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\7.0.0\\microsoft.aspnetcore.components.webassembly.devserver.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.4\\microsoft.aspnetcore.metadata.7.0.4.nupkg.sha512",
+    "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
@@ -30,6 +31,8 @@
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.jsinterop\\7.0.4\\microsoft.jsinterop.7.0.4.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.4\\microsoft.jsinterop.webassembly.7.0.4.nupkg.sha512",
+    "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\paulo.emilio\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\paulo.emilio\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",

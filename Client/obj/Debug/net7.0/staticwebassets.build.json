@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w7YFbyK9/Y+TLJGZU7Q9bUwcgH7u1CCHoI961Od/AfQ=",
+  "Hash": "xbLXSRfqaqw6Cb3miYW4rckminpKYO3kZaJAixqG3hQ=",
   "Source": "DoaseApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -374,6 +374,23 @@
       "OriginalItemSpec": "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.4\\lib\\net7.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
+      "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\lib\\netstandard2.0\\Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
       "SourceId": "DoaseApp.Client",
       "SourceType": "Computed",
@@ -661,6 +678,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.4\\lib\\net7.0\\Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\paulo.emilio\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\lib\\netstandard2.0\\Microsoft.Net.Http.Headers.dll"
     },
     {
       "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll",
@@ -5746,6 +5780,23 @@
       "OriginalItemSpec": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.dll"
     },
     {
+      "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\obj\\Debug\\net7.0\\build-gz\\P6TJd3Ym.gz",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.dll"
+    },
+    {
       "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\obj\\Debug\\net7.0\\build-gz\\P8xyZxX8.gz",
       "SourceId": "DoaseApp.Client",
       "SourceType": "Computed",
@@ -6441,6 +6492,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Xml.XDocument.dll"
+    },
+    {
+      "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\obj\\Debug\\net7.0\\build-gz\\VoV2k9S3.gz",
+      "SourceId": "DoaseApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll"
     },
     {
       "Identity": "C:\\Users\\paulo.emilio\\Desktop\\DoaseApp\\DoaseApp\\Client\\obj\\Debug\\net7.0\\build-gz\\vOw4i1cV.gz",

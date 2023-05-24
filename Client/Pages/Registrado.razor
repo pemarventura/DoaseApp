@@ -1,10 +1,16 @@
 ﻿@page "/registrado-page"
 @inject NavigationManager NavigationManager
+@inject HttpClient httpClient
 @using Microsoft.AspNetCore.Components.Web
-@using Microsoft.AspNetCore.WebUtilities
+@using static Microsoft.AspNetCore.WebUtilities.QueryHelpers
 
 
-<h3>Welcome to the Registered Page</h3>
+@if (sucBuscarUsuario == true)
+{
+    <div class="d-flex justify-content-center">
+        <h3>Olá, @User.FirstName!</h3>
+    </div>
+}
 
 <p>Email: @Email</p>
 <p>Password: @Password</p>
@@ -14,17 +20,34 @@
 @code {
     [Parameter] public string Email { get; set; }
     [Parameter] public string Password { get; set; }
+    public Person User { get; set; }
 
-    protected override void OnInitialized()
+    public bool sucBuscarUsuario = false;
+
+
+
+    protected override async Task OnInitializedAsync()
     {
         var uri = new Uri(NavigationManager.Uri);
-        var queryParameters = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+        var queryParameters = System.Web.HttpUtility.ParseQueryString(uri.Query);
         Email = queryParameters["email"];
         Password = queryParameters["password"];
+
+        await GetUserByEmail(Email);
+
     }
 
     private void NavigateToLoginPage()
     {
         NavigationManager.NavigateTo("/");
     }
+
+    private async Task GetUserByEmail(string email)
+    {
+        User = await httpClient.GetFromJsonAsync<Person>($"api/person/byEmail?email={email}");
+
+        if (User != null)
+            sucBuscarUsuario = true;
+    }
 }
+

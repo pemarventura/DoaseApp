@@ -15,6 +15,13 @@ namespace DoaseApp.Shared
             return _persons.Select(person => person);
         }
 
+        public Person GetUserByEmail(string email)
+        {
+            var user = _persons.Where(person => person.Email == email).FirstOrDefault();
+
+            return user;
+        }
+
         public void AddPerson(Person person)
         {
             _persons.Add(person);

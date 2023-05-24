@@ -2542,3 +2542,11 @@ C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\DoaseApp
 C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\refint\DoaseApp.Client.dll
 C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\DoaseApp.Client.pdb
 C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\ref\DoaseApp.Client.dll
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\build-gz\VoV2k9S3.gz
+C:\Users\paulo.emilio\Desktop\DoaseApp\DoaseApp\Client\obj\Debug\net7.0\build-gz\P6TJd3Ym.gz

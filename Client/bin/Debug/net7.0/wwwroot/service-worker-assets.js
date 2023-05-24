@@ -113,6 +113,10 @@
       "url": "_framework\/Microsoft.AspNetCore.Metadata.dll"
     },
     {
+      "hash": "sha256-D5akJeBd7NNITuzAXxlX7zl2jfsc4uTKyeEKwwNhqoo=",
+      "url": "_framework\/Microsoft.AspNetCore.WebUtilities.dll"
+    },
+    {
       "hash": "sha256-PqQvp77oZ4+uuy2ElXk8AU9I6RfZSf18UGTrd4rulOo=",
       "url": "_framework\/Microsoft.Extensions.Configuration.dll"
     },
@@ -175,6 +179,10 @@
     {
       "hash": "sha256-NT4DzRkrAn8\/DnLS4W87pBIa3J0w29RPFsnSWcmL9Tc=",
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "hash": "sha256-P66ftDrXwc6ayND8uYzIk0CPQy1GjNZAPHx9RMhi3V4=",
+      "url": "_framework\/Microsoft.Net.Http.Headers.dll"
     },
     {
       "hash": "sha256-P\/MqD0fCBd5bgTM16JC1QC\/Zz7s+CwViyzmDFkBG4\/c=",
@@ -881,19 +889,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-DQxDenTwcljC28srA243D4SL\/vOcU+PvqgTUydMDb3w=",
+      "hash": "sha256-eUYHR7tcpx4GgUU350lZq4+c7TymvFjdK\/Sfox2cmIo=",
       "url": "_framework\/DoaseApp.Shared.dll"
     },
     {
-      "hash": "sha256-O5UUMSP1HweVnt3dqGgkBxDQlX+j\/K5Nv1XEaaJ8cn8=",
+      "hash": "sha256-ubkRG4jpkuxC0IQe3s5o0TI4j6N17WMbKUxbWi2XTCU=",
       "url": "_framework\/DoaseApp.Shared.pdb"
     },
     {
-      "hash": "sha256-4yxnyO\/xV6YdM7H5YntpmIecqF75WVKBrsqun800Mdg=",
+      "hash": "sha256-+ae5+WiwLXRxyCvfGWTSLW7HBvXpo4Cs9821Q1r15LU=",
       "url": "_framework\/DoaseApp.Client.dll"
     },
     {
-      "hash": "sha256-X41SYEvbISm33ZmteKrypnsQoKeCnlMVyeortg6wOSc=",
+      "hash": "sha256-eBITy7B2GXwPMVTxJVPJK\/wAcyrQFp3O81ytNKbnrks=",
       "url": "_framework\/DoaseApp.Client.pdb"
     },
     {
@@ -901,9 +909,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-3AIl+j67BmR28BxZOOH9X8Ynvx7Yoa8AM\/scX7xQNgM=",
+      "hash": "sha256-kSxNTAF+Ny2dv5r2trA6dgnNaD8HN0gLUz0R1G8CVoo=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "yxsdZsVK"
+  "version": "WEg+mJ2x"
 };

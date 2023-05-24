@@ -46,7 +46,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="name">Empresa:</label>
-                    <InputText id="name" class="form-control" @bind-Value="@person.NomeEmpresa" required />
+                    <InputText id="name" class="form-control" @bind-Value="@person.FirstName" required />
                     <ValidationMessage For="@(() => person.FirstName)" />
                 </div>
 
@@ -275,7 +275,7 @@
 
     private async Task GetAll()
     {
-        persons = await httpClient.GetFromJsonAsync <IEnumerable<Person>> ("api/person");
+        persons = await httpClient.GetFromJsonAsync <IEnumerable<Person>> ("api/person/all");
     }
 
     private void ShowForm()

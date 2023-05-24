@@ -9,6 +9,7 @@ namespace DoaseApp.Shared
     public interface IPersonRepository
     {
         IEnumerable<Person> GetAll();
+        Person GetUserByEmail(string email);
         void AddPerson(Person person);
     }
 }
