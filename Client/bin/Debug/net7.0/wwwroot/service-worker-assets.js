@@ -77,7 +77,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-XTWhsSrGt3Ki9zfaVXcdnp8y2EtO\/2pVvxd1h7\/+CkE=",
+      "hash": "sha256-G0CjXM9jIH\/CBq0ZCtjMmgOkdQ9S8xPIDbdfqmfleb0=",
       "url": "DoaseApp.Client.styles.css"
     },
     {
@@ -897,11 +897,19 @@
       "url": "_framework\/DoaseApp.Shared.pdb"
     },
     {
+<<<<<<< Updated upstream
       "hash": "sha256-+ae5+WiwLXRxyCvfGWTSLW7HBvXpo4Cs9821Q1r15LU=",
       "url": "_framework\/DoaseApp.Client.dll"
     },
     {
       "hash": "sha256-eBITy7B2GXwPMVTxJVPJK\/wAcyrQFp3O81ytNKbnrks=",
+=======
+      "hash": "sha256-7n8YRRSLfly0+eOKM0rRNS1qp\/c\/YbA+Qkbq5h4wbzA=",
+      "url": "_framework\/DoaseApp.Client.dll"
+    },
+    {
+      "hash": "sha256-Nv+GKcaJG3hjIG5oepOj+7wOAdkE\/BwxlOE9QLEm16c=",
+>>>>>>> Stashed changes
       "url": "_framework\/DoaseApp.Client.pdb"
     },
     {
@@ -909,9 +917,17 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
+<<<<<<< Updated upstream
       "hash": "sha256-kSxNTAF+Ny2dv5r2trA6dgnNaD8HN0gLUz0R1G8CVoo=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
   "version": "WEg+mJ2x"
+=======
+      "hash": "sha256-zlp10oAg++lXMIH08BIPTJ9oTTC6GW485kIjCb8GEZw=",
+      "url": "_framework\/blazor.boot.json"
+    }
+  ],
+  "version": "voltLvaq"
+>>>>>>> Stashed changes
 };
