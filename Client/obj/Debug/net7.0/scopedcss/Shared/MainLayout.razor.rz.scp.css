@@ -46,6 +46,7 @@ main[b-z68tsfbarx] {
             text-overflow: ellipsis;
         }
 
+ 
 @media (max-width: 640.98px) {
     .top-row:not(.auth)[b-z68tsfbarx] {
         display: none;
@@ -71,10 +72,6 @@ main[b-z68tsfbarx] {
         position: sticky;
         top: 0;
     }
-
-        .sidebar .navbar[b-z68tsfbarx] {
-            background-image: linear-gradient(180deg, #ffde59 0%, #7ed957 16.67%, #004ad3 33.33%, #0cc0df 50%, #993399 66.67%, #ff3131 83.33%) !important;
-        }
 
     .top-row[b-z68tsfbarx] {
         position: sticky;
