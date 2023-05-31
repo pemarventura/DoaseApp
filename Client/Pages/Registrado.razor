@@ -1,6 +1,7 @@
 ﻿@page "/registrado-page"
 @inject NavigationManager NavigationManager
 @inject HttpClient httpClient
+@using DoaseApp.Shared.Classes;
 @using Microsoft.AspNetCore.Components.Web
 @using static Microsoft.AspNetCore.WebUtilities.QueryHelpers
 
@@ -17,7 +18,7 @@
             <div class="criar-campanha">
                 <div class="rectangle">
                     <div class="inner-div">
-                        <button><strong>Criar Campanha</strong></button>
+                        <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToCriarCampanha"><strong>Criar Campanha</strong></button>
                     </div>
                 </div>
             </div>
@@ -56,6 +57,11 @@
     }
 
     private void NavigateToLoginPage()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    private void NavigateToCriarCampanha()
     {
         NavigationManager.NavigateTo("/");
     }

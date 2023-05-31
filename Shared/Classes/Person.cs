@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DoaseApp.Shared
+namespace DoaseApp.Shared.Classes
 {
     public class Person
     {
         public string? FirstName { get; set; }
-        public string? LastName { get; set;}
+        public string? LastName { get; set; }
         public string? NomeEmpresa { get; set; }
         public string? CPF { get; set; }
         public string? CNPJ { get; set; }

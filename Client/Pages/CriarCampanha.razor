@@ -1,0 +1,29 @@
+﻿@page "/criar-campanha"
+@inject NavigationManager NavigationManager
+@inject HttpClient httpClient
+@using DoaseApp.Shared.Classes;
+@using Microsoft.AspNetCore.Components.Web
+@using static Microsoft.AspNetCore.WebUtilities.QueryHelpers
+
+<h3>Criar Campanha</h3>
+
+@code {
+    [Parameter] public string Email { get; set; }
+    public Person User { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        var queryParameters = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        Email = queryParameters["email"];
+
+        await GetUserByEmail(Email);
+    }
+
+    private async Task GetUserByEmail(string email)
+    {
+        User = await httpClient.GetFromJsonAsync<Person>($"api/person/byEmail?email={email}");
+
+        if (User != null) ;
+    }
+}

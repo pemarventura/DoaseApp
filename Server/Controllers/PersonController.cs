@@ -1,4 +1,5 @@
 ﻿using DoaseApp.Shared;
+using DoaseApp.Shared.Classes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
