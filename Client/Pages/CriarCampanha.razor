@@ -23,7 +23,5 @@
     private async Task GetUserByEmail(string email)
     {
         User = await httpClient.GetFromJsonAsync<Person>($"api/person/byEmail?email={email}");
-
-        if (User != null) ;
     }
 }

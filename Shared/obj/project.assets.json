@@ -1350,11 +1350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PEMAR\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
+      "projectUniqueName": "D:\\PEMAR\\Desktop\\dasdasad\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
       "projectName": "DoaseApp.Shared",
-      "projectPath": "D:\\PEMAR\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
+      "projectPath": "D:\\PEMAR\\Desktop\\dasdasad\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
       "packagesPath": "C:\\Users\\PEMAR\\.nuget\\packages\\",
-      "outputPath": "D:\\PEMAR\\Desktop\\Doase\\DoaseApp\\Shared\\obj\\",
+      "outputPath": "D:\\PEMAR\\Desktop\\dasdasad\\DoaseApp\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PEMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",

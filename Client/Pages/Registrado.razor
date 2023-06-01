@@ -34,12 +34,15 @@
 <p>Email: @Email</p>
 <p>Password: @Password</p>
 
+<p>teste: @User?.Email</p>
+
 <button @onclick="NavigateToLoginPage">Go Back to Login Page</button>
 
 @code {
     [Parameter] public string Email { get; set; }
     [Parameter] public string Password { get; set; }
-    public Person User { get; set; }
+    public Person User { get; set; } = new Person(); // Initialize User object
+    private string username;
 
     public bool sucBuscarUsuario = false;
 
@@ -63,7 +66,8 @@
 
     private void NavigateToCriarCampanha()
     {
-        NavigationManager.NavigateTo("/");
+        username = User.Email;
+        NavigationManager.NavigateTo($"/criar-campanha?email={username}");
     }
 
     private async Task GetUserByEmail(string email)
