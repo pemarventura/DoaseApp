@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eZ/TZyS3UrLKoHYnFdqacbnddSZolCcjlej8TFy2iuMycesX78b1Tkg/2CB9DBulEJTrUgeNyd+QbBNzmFBDRQ==",
+  "dgSpecHash": "5+bdb+XeY8fTZVLm3QY3XCRF6ovT++IQ6sIk0F2EJAYLqtlkub4raREN9f9GtfVMDlSw2YtmM0WWDjVBVume/w==",
   "success": true,
-  "projectFilePath": "D:\\PEMAR\\Desktop\\dasdasad\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
+  "projectFilePath": "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PEMAR\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\PEMAR\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.4\\microsoft.aspnetcore.authorization.7.0.4.nupkg.sha512",

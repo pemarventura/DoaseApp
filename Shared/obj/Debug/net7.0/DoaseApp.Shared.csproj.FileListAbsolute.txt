@@ -58,3 +58,15 @@ D:\PEMAR\Desktop\dasdasad\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.dll
 D:\PEMAR\Desktop\dasdasad\DoaseApp\Shared\obj\Debug\net7.0\refint\DoaseApp.Shared.dll
 D:\PEMAR\Desktop\dasdasad\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.pdb
 D:\PEMAR\Desktop\dasdasad\DoaseApp\Shared\obj\Debug\net7.0\ref\DoaseApp.Shared.dll
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\bin\Debug\net7.0\DoaseApp.Shared.deps.json
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\bin\Debug\net7.0\DoaseApp.Shared.dll
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\bin\Debug\net7.0\DoaseApp.Shared.pdb
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.csproj.AssemblyReference.cache
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.AssemblyInfoInputs.cache
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.AssemblyInfo.cs
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.csproj.CoreCompileInputs.cache
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.dll
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\refint\DoaseApp.Shared.dll
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\DoaseApp.Shared.pdb
+D:\PEMAR\Desktop\Projeto\DoaseApp\Shared\obj\Debug\net7.0\ref\DoaseApp.Shared.dll

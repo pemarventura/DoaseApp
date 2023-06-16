@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IPersonRepository, PersonRepository>();
+builder.Services.AddSingleton<IItemRepository, ItemRepository>();
 
 var app = builder.Build();
 
