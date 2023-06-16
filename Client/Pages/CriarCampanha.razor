@@ -4,81 +4,104 @@
 @inject IItemRepository ItemRepository
 @using DoaseApp.Shared.Classes;
 @using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.WebUtilities;
 @using static Microsoft.AspNetCore.WebUtilities.QueryHelpers
 
 <h3>Criar Campanha</h3>
 
-<div class="mb-3">
-    <label for="formGroupExampleInput" class="form-label">Criador: </label>
-    <input type="text" class="form-control" id="criador" placeholder="Criador...">
-</div>
-<div class="mb-3">
-    <label for="formGroupExampleInput2" class="form-label">Nome da Campanha: </label>
-    <input type="text" class="form-control" id="nomeCampanha" placeholder="De um nome para a campanha..">
-</div>
-<div class="mb-3">
-    <label for="formGroupExampleInput2" class="form-label">Descricao: </label>
-    <textarea class="form-control" id="formGroupExampleInput2" placeholder="Descreva a quem e como essa campanha beneficiara..."></textarea>
-</div>
+<EditForm Model="@campanha" OnValidSubmit="CreateCampanha">
+    <div class="mb-3">
+        <label for="criador" class="form-label">Criador: </label>
+        <InputText class="form-control" id="criador" placeholder="Criador..." @bind-Value="@campanha.Criador" />
+    </div>
+    <div class="mb-3">
+        <label for="nomeCampanha" class="form-label">Nome da Campanha: </label>
+        <InputText class="form-control" id="nomeCampanha" placeholder="De um nome para a campanha..." @bind-Value="@campanha.NomeCampanha" />
+    </div>
+    <div class="mb-3">
+        <label for="objetivos" class="form-label">Descricao: </label>
+        <InputTextArea class="form-control" id="objetivos" placeholder="Descreva a quem e como essa campanha beneficiara..." @bind-Value="@campanha.Objetivos" />
+    </div>
 
 <h4>Selecione quais os itens e quantidades arrecadados pela campanha: </h4>
 
-
-<div class="row justify-content-center">
-    <div class="col-3">
-        <InputSelect class="form-control" @bind-Value="selectedName">
-            <option value="">Select a name</option>
-            @foreach (var item in Itens)
-            {
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <InputSelect class="form-control" @bind-Value="selectedName1">
+                <option value="">Selecione um item para arrecadar: </option>
+                @foreach (var item in Itens)
+                {
                     <option value="@item.NomeItem">@item.NomeItem</option>
-            }
-        </InputSelect>
+                }
+            </InputSelect>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade1" />
+        </div>
     </div>
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-    </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <InputSelect class="form-control" @bind-Value="selectedName2">
+                <option value="">Selecione um item para arrecadar: </option>
+                @foreach (var item in Itens)
+                {
+                    <option value="@item.NomeItem">@item.NomeItem</option>
+                }
+            </InputSelect>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade2" />
+        </div>
     </div>
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-    </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <InputSelect class="form-control" @bind-Value="selectedName3">
+                <option value="">Selecione um item para arrecadar: </option>
+                @foreach (var item in Itens)
+                {
+                    <option value="@item.NomeItem">@item.NomeItem</option>
+                }
+            </InputSelect>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade3" />
+        </div>
     </div>
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <InputSelect class="form-control" @bind-Value="selectedName4">
+                <option value="">Selecione um item para arrecadar: </option>
+                @foreach (var item in Itens)
+                {
+                    <option value="@item.NomeItem">@item.NomeItem</option>
+                }
+            </InputSelect>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade4" />
+        </div>
     </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <InputSelect class="form-control" @bind-Value="selectedName5">
+                <option value="">Selecione um item para arrecadar: </option>
+                @foreach (var item in Itens)
+                {
+                    <option value="@item.NomeItem">@item.NomeItem</option>
+                }
+            </InputSelect>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade5" />
+        </div>
     </div>
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-    </div>
-</div>
 
-<div class="row justify-content-center">
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-    </div>
-    <div class="col-3">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-    </div>
-</div>
-
-
-
-
-<button type="button" class="btn btn-primary">Primary</button>
+    <button type="submit" class="btn btn-primary" @onclick="CreateCampanha">Create Campanha</button>
+</EditForm>
 
 
 @code {
@@ -86,19 +109,30 @@
     [Parameter] public string Email { get; set; }
     public Person User { get; set; }
 
-    private string selectedName;
+    private string selectedName1;
+    private string selectedName2;
+    private string selectedName3;
+    private string selectedName4;
+    private string selectedName5;
+
+    private int quantidade1;
+    private int quantidade2;
+    private int quantidade3;
+    private int quantidade4;
+    private int quantidade5;
 
     public List<Item> Itens { get; set; } = new List<Item>();
+
+    public Campanha campanha = new Campanha();
 
     protected override async Task OnInitializedAsync()
     {
         var uri = new Uri(NavigationManager.Uri);
-        var queryParameters = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        var queryParameters = QueryHelpers.ParseQuery(uri.Query);
         Email = queryParameters["email"];
 
         await GetUserByEmail(Email);
         await GetAllItens();
-
     }
 
     private async Task GetUserByEmail(string email)
@@ -109,7 +143,69 @@
     private async Task GetAllItens()
     {
         var items = await httpClient.GetFromJsonAsync<IEnumerable<Item>>("api/item/all");
-
         Itens = items?.ToList();
     }
+
+    private async Task CreateCampanha()
+    {
+        campanha.DoacoesRequisitadas = new List<DoacoesRequisitadas>();
+
+        if (!string.IsNullOrEmpty(selectedName1))
+        {
+            var item1 = new Item { NomeItem = selectedName1 };
+            var doacao1 = new DoacoesRequisitadas
+                {
+                    Item = item1,
+                    QuantidadePedida = quantidade1
+                };
+            campanha.DoacoesRequisitadas.Add(doacao1);
+        }
+
+        if (!string.IsNullOrEmpty(selectedName2))
+        {
+            var item2 = new Item { NomeItem = selectedName2 };
+            var doacao2 = new DoacoesRequisitadas
+                {
+                    Item = item2,
+                    QuantidadePedida = quantidade2
+                };
+            campanha.DoacoesRequisitadas.Add(doacao2);
+        }
+
+        if (!string.IsNullOrEmpty(selectedName3))
+        {
+            var item3 = new Item { NomeItem = selectedName3 };
+            var doacao3 = new DoacoesRequisitadas
+                {
+                    Item = item3,
+                    QuantidadePedida = quantidade3
+                };
+            campanha.DoacoesRequisitadas.Add(doacao3);
+        }
+
+        if (!string.IsNullOrEmpty(selectedName4))
+        {
+            var item4 = new Item { NomeItem = selectedName4 };
+            var doacao4 = new DoacoesRequisitadas
+                {
+                    Item = item4,
+                    QuantidadePedida = quantidade4
+                };
+            campanha.DoacoesRequisitadas.Add(doacao4);
+        }
+
+        if (!string.IsNullOrEmpty(selectedName5))
+        {
+            var item5 = new Item { NomeItem = selectedName5 };
+            var doacao5 = new DoacoesRequisitadas
+                {
+                    Item = item5,
+                    QuantidadePedida = quantidade5
+                };
+            campanha.DoacoesRequisitadas.Add(doacao5);
+        }
+
+        await httpClient.PostAsJsonAsync("api/campanha", campanha);
+    }
+}
 }

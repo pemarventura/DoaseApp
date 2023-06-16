@@ -8,10 +8,9 @@ namespace DoaseApp.Shared.Classes
 {
     public class Campanha
     {
-        public string Criador { get; }
-        public string NomeCampanha { get; }
-        public string Objetivos { get; }
+        public string Criador { get; set; }
+        public string NomeCampanha { get; set; }
+        public string Objetivos { get; set; }
         public List<DoacoesRequisitadas> DoacoesRequisitadas { get; set; }
-
     }
 }

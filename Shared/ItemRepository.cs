@@ -14,7 +14,8 @@ namespace DoaseApp.Shared
             new Item { NomeItem = "Dinheiro" },
             new Item { NomeItem = "Roupas" },
             new Item { NomeItem = "Brinquedos" },
-            new Item { NomeItem = "Cestas basicas" }
+            new Item { NomeItem = "Cestas basicas" },
+            new Item { NomeItem = "Kit Higiene"}
         };
 
         public IEnumerable<Item> GetAll()

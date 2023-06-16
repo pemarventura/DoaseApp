@@ -9,6 +9,5 @@ namespace DoaseApp.Shared.Classes
     public class Item
     {
         public string NomeItem { get; set; }
-        public string ValorUnico { get; set; }
     }
 }

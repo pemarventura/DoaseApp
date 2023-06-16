@@ -9,7 +9,11 @@ namespace DoaseApp.Shared
 {
     public class PersonRepository : IPersonRepository
     {
-        private readonly List<Person> _persons = new List<Person>();
+        private readonly List<Person> _persons = new List<Person>
+        { 
+            new Person { Email = "1", Senha = "1"}
+        };
+
 
         public IEnumerable<Person> GetAll()
         {
