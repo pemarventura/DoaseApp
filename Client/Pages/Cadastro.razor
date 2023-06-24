@@ -4,7 +4,6 @@
 @using DoaseApp.Shared.Enums;
 @using System.ComponentModel;
 @inject HttpClient httpClient
-@inject IPersonRepository PersonRepository
 @inject NavigationManager NavigationManager
 
 <h1 style="text-align:center;">Cadastro de Usuário</h1>
@@ -275,7 +274,7 @@
 
     private async Task GetAll()
     {
-        persons = await httpClient.GetFromJsonAsync <IEnumerable<Person>> ("api/person/all");
+        persons = await httpClient.GetFromJsonAsync<IEnumerable<Person>>("api/person/all");
     }
 
     private void ShowForm()

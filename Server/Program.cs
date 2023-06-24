@@ -1,14 +1,21 @@
 using DoaseApp.Shared;
+using DoaseApp.Shared.DataContext;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddDbContext<DoaseContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"));
+});
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<IPersonRepository, PersonRepository>();
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

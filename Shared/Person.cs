@@ -9,6 +9,7 @@ namespace DoaseApp.Shared
 {
     public class Person
     {
+        public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set;}
         public string? NomeEmpresa { get; set; }
@@ -23,7 +24,7 @@ namespace DoaseApp.Shared
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
         public string? Senha { get; set; }
-        public DateOnly DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
         public bool CriaCampanha { get; set; } = false;
 
