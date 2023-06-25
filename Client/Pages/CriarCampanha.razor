@@ -9,105 +9,123 @@
 
 <h3>Criar Campanha</h3>
 
-<EditForm Model="@campanha" OnValidSubmit="CreateCampanha">
-    <div class="mb-3">
-        <label for="criador" class="form-label">Criador: </label>
-        <InputText class="form-control" id="criador" placeholder="Criador..." @bind-Value="@campanha.Criador" />
-    </div>
-    <div class="mb-3">
-        <label for="nomeCampanha" class="form-label">Nome da Campanha: </label>
-        <InputText class="form-control" id="nomeCampanha" placeholder="De um nome para a campanha..." @bind-Value="@campanha.NomeCampanha" />
-    </div>
-    <div class="mb-3">
-        <label for="objetivos" class="form-label">Descricao: </label>
-        <InputTextArea class="form-control" id="objetivos" placeholder="Descreva a quem e como essa campanha beneficiara..." @bind-Value="@campanha.Objetivos" />
-    </div>
+@if (CadastroCompleto == false)
+{
+    <EditForm Model="@campanha" OnValidSubmit="CreateCampanha">
+        <div class="mb-3">
+            <label for="criador" class="form-label">Criador: </label>
+            <InputText class="form-control" id="criador" placeholder="Criador..." @bind-Value="@campanha.Criador" />
+        </div>
+        <div class="mb-3">
+            <label for="nomeCampanha" class="form-label">Nome da Campanha: </label>
+            <InputText class="form-control" id="nomeCampanha" placeholder="De um nome para a campanha..." @bind-Value="@campanha.NomeCampanha" />
+        </div>
+        <div class="mb-3">
+            <label for="objetivos" class="form-label">Descricao: </label>
+            <InputTextArea class="form-control" id="objetivos" placeholder="Descreva a quem e como essa campanha beneficiara..." @bind-Value="@campanha.Objetivos" />
+        </div>
 
-<h4>Selecione quais os itens e quantidades arrecadados pela campanha: </h4>
+        <h4>Selecione quais os itens e quantidades arrecadados pela campanha: </h4>
 
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <InputSelect class="form-control" @bind-Value="selectedName1">
-                <option value="">Selecione um item para arrecadar: </option>
-                @foreach (var item in Itens)
-                {
-                    <option value="@item.NomeItem">@item.NomeItem</option>
-                }
-            </InputSelect>
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <InputSelect class="form-control" @bind-Value="selectedName1">
+                    <option value="">Selecione um item para arrecadar: </option>
+                    @foreach (var item in Itens)
+                    {
+                        <option value="@item.NomeItem">@item.NomeItem</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade1" />
+            </div>
         </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade1" />
+
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <InputSelect class="form-control" @bind-Value="selectedName2">
+                    <option value="">Selecione um item para arrecadar: </option>
+                    @foreach (var item in Itens)
+                    {
+                        <option value="@item.NomeItem">@item.NomeItem</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade2" />
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <InputSelect class="form-control" @bind-Value="selectedName3">
+                    <option value="">Selecione um item para arrecadar: </option>
+                    @foreach (var item in Itens)
+                    {
+                        <option value="@item.NomeItem">@item.NomeItem</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade3" />
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <InputSelect class="form-control" @bind-Value="selectedName4">
+                    <option value="">Selecione um item para arrecadar: </option>
+                    @foreach (var item in Itens)
+                    {
+                        <option value="@item.NomeItem">@item.NomeItem</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade4" />
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <InputSelect class="form-control" @bind-Value="selectedName5">
+                    <option value="">Selecione um item para arrecadar: </option>
+                    @foreach (var item in Itens)
+                    {
+                        <option value="@item.NomeItem">@item.NomeItem</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade5" />
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" @onclick="CreateCampanha">Create Campanha</button>
+    </EditForm>
+
+}
+
+else
+{
+    <div class="d-flex justify-content-center">
+        <div class="card bg-light p-5">
+            <div class="card-body d-flex flex-column align-items-center">
+                <p>Seus dados foram salvos com sucesso!</p>
+                <div class="d-flex justify-content-center mb-8">
+                    <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToRegistered">Continuar</button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <InputSelect class="form-control" @bind-Value="selectedName2">
-                <option value="">Selecione um item para arrecadar: </option>
-                @foreach (var item in Itens)
-                {
-                    <option value="@item.NomeItem">@item.NomeItem</option>
-                }
-            </InputSelect>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade2" />
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <InputSelect class="form-control" @bind-Value="selectedName3">
-                <option value="">Selecione um item para arrecadar: </option>
-                @foreach (var item in Itens)
-                {
-                    <option value="@item.NomeItem">@item.NomeItem</option>
-                }
-            </InputSelect>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade3" />
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <InputSelect class="form-control" @bind-Value="selectedName4">
-                <option value="">Selecione um item para arrecadar: </option>
-                @foreach (var item in Itens)
-                {
-                    <option value="@item.NomeItem">@item.NomeItem</option>
-                }
-            </InputSelect>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade4" />
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <InputSelect class="form-control" @bind-Value="selectedName5">
-                <option value="">Selecione um item para arrecadar: </option>
-                @foreach (var item in Itens)
-                {
-                    <option value="@item.NomeItem">@item.NomeItem</option>
-                }
-            </InputSelect>
-        </div>
-        <div class="col-3">
-            <input type="text" class="form-control" placeholder="Quantidade: " aria-label="Last name" @bind="@quantidade5" />
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary" @onclick="CreateCampanha">Create Campanha</button>
-</EditForm>
-
+}
 
 @code {
 
     [Parameter] public string Email { get; set; }
     public Person User { get; set; }
+    public bool CadastroCompleto { get; set; } = false;
 
     private string selectedName1;
     private string selectedName2;
@@ -148,6 +166,7 @@
 
     private async Task CreateCampanha()
     {
+        campanha.Usuario = User.Email;
         campanha.DoacoesRequisitadas = new List<DoacoesRequisitadas>();
 
         if (!string.IsNullOrEmpty(selectedName1))
@@ -205,7 +224,42 @@
             campanha.DoacoesRequisitadas.Add(doacao5);
         }
 
-        await httpClient.PostAsJsonAsync("api/campanha", campanha);
+        try
+        {
+            var response = await httpClient.PostAsJsonAsync("api/campanha", campanha);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowSuccessMessage();
+            }
+
+            var updatedPersonResponse = await httpClient.PutAsJsonAsync("api/person/update", User);
+
+        }
+
+        catch
+        {
+
+        }
     }
+
+    private void ShowSuccessMessage()
+    {
+        CadastroCompleto = true;
+    }
+
+    private void ResetForm()
+    {
+        CadastroCompleto = false;
+    }
+
+    private void NavigateToRegistered()
+    {
+        string username = User.Email;
+        string password = User.Senha;
+
+        NavigationManager.NavigateTo($"/registrado-page?email={username}&password={password}");
+    }
+
 }
-}
+

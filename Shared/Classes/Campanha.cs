@@ -12,5 +12,6 @@ namespace DoaseApp.Shared.Classes
         public string NomeCampanha { get; set; }
         public string Objetivos { get; set; }
         public List<DoacoesRequisitadas> DoacoesRequisitadas { get; set; }
+        public string Usuario { get; set; }
     }
 }

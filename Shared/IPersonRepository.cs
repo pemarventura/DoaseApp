@@ -12,5 +12,6 @@ namespace DoaseApp.Shared
         IEnumerable<Person> GetAll();
         Person GetUserByEmail(string email);
         void AddPerson(Person person);
+        void UpdatePerson(Person updatedPerson);
     }
 }

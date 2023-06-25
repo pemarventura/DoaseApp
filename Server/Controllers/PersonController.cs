@@ -33,5 +33,13 @@ namespace DoaseApp.Server.Controllers
         {
             _repository.AddPerson(person);
         }
+
+        [HttpPut("{update}")]
+        public IActionResult Put([FromBody] Person updatedPerson)
+        {
+            _repository.UpdatePerson(updatedPerson);
+
+            return NoContent();
+        }
     }
 }

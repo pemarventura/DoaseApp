@@ -26,6 +26,7 @@ namespace DoaseApp.Shared.Classes
         public DateOnly DateOfBirth { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
         public bool CriaCampanha { get; set; } = false;
+        public bool TemCampanha { get; set; } = false;
 
     }
 }

@@ -31,5 +31,19 @@ namespace DoaseApp.Shared
         {
             _persons.Add(person);
         }
+
+        public void UpdatePerson(Person updatedPerson)
+        {
+            var existingPerson = _persons.FirstOrDefault(person => person.Email == updatedPerson.Email);
+
+            if (existingPerson != null)
+            {
+                existingPerson.TemCampanha = true;
+            }
+            else
+            {
+                throw new ArgumentException("Person not found.");
+            }
+        }
     }
 }
