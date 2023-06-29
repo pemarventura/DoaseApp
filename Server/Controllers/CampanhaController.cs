@@ -23,9 +23,9 @@ namespace DoaseApp.Server.Controllers
         }
 
         [HttpGet("CampanhaByUser")]
-        public Campanha GetItemByName(string user)
+        public Campanha GetCampanhaByUser(string email)
         {
-            return _repository.GetCampanhaByUser(user);
+            return _repository.GetCampanhaByUser(email);
         }
 
         [HttpPost]

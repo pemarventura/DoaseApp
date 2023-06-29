@@ -18,11 +18,15 @@ namespace DoaseApp.Shared
             return _campanha.Select(campanha => campanha);
         }
 
-        public Campanha GetCampanhaByUser(string user)
+        public Campanha GetCampanhaByUser(string email)
         {
-            var campanha = _campanha.Where(campanha => campanha.Criador == user).FirstOrDefault();
+            var campanha = _campanha.Where(campanha => campanha.Usuario == email).FirstOrDefault();
 
-            return campanha;
+            if (campanha != null)
+                return campanha;
+
+            else
+                return null;
         }
 
         public void AddCampanha(Campanha campanha)

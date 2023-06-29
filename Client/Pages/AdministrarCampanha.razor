@@ -10,67 +10,57 @@
 
 <h3 class="d-flex justify-content-center">Administrar Campanha</h3>
 
-<div style="background-color: lightblue;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center">Title</h3>
-            </div>
+<div class="container" style="background-color: white;">
+    <div class="row">
+        <div class="col-md-6 border">
+            <p>Nome</p>
+        </div>
+        <div class="col-md-6 border">
+            <p>Quantidade</p>
         </div>
     </div>
 
-    <div class="container" style="background-color: white;">
-        <div class="row">
-            <div class="col-md-6 border">
-                <p>Teste</p>
+    
+    @if (Campanha != null && Campanha.DoacoesRequisitadas != null)
+    {
+        @foreach (var doacao in Campanha.DoacoesRequisitadas)
+        {
+            <div class="row">
+                <div class="col-md-6 border">
+                    <p>@doacao.Item?.NomeItem</p>
+                </div>
+                <div class="col-md-6 border">
+                    <p>@doacao.QuantidadeArrecadada</p>
+                </div>
             </div>
-            <div class="col-md-6 border">
-                <p>Teste2</p>
-            </div>
-        </div>
+        }
+    }
 
-        <div class="row">
-            <div class="col-md-6 border">
-                <p>Teste3</p>
-            </div>
-            <div class="col-md-6 border">
-                <p>Teste4</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 border">
-                <p>Teste5</p>
-            </div>
-            <div class="col-md-6 border">
-                <p>Teste6</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 border">
-                <p>Teste7</p>
-            </div>
-            <div class="col-md-6 border">
-                <p>Teste8</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 border">
-                <p>Teste9</p>
-            </div>
-            <div class="col-md-6 border">
-                <p>Teste10</p>
-            </div>
-        </div>
-    </div>
 </div>
 
 
-
+<p>@Campanha.NomeCampanha</p>
 
 @code {
-    
+
+    [Parameter] public string Email { get; set; }
+
+    public Person User { get; set; } = new Person(); // Initialize User object
+    public Campanha Campanha { get; set; } = new Campanha();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        var queryParameters = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        Email = queryParameters["email"];
+
+        await CampanhaByUser(Email);
+
+    }
+
+    private async Task CampanhaByUser(string email)
+    {
+        Campanha = await httpClient.GetFromJsonAsync<Campanha>($"api/campanha/CampanhaByUser?email={email}");
+    }
 }
 

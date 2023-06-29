@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DoaseApp.Shared.Classes
 {
     public class DoacoesRequisitadas
     {
+        [JsonProperty("item")]
         public Item Item { get; set; } 
         public int QuantidadePedida { get; set; }
         public int QuantidadeArrecadada { get; set; }

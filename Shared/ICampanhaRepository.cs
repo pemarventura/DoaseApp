@@ -10,7 +10,7 @@ namespace DoaseApp.Shared
     public interface ICampanhaRepository
     {
         IEnumerable<Campanha> GetAll();
-        Campanha GetCampanhaByUser(string user);
+        Campanha GetCampanhaByUser(string email);
         void AddCampanha(Campanha campanha);
     }
 }

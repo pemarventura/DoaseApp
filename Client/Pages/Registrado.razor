@@ -29,7 +29,7 @@
                         <div class="rectangle">
                             <div class="inner-div">
                                 @*ADICIONAR ESTA VALIDACAO DEPOIS*@
-                                <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToCriarAdministarCampanha" disabled="@(User.TemCampanha @*? false : true*@)"><strong>Administrar Campanha</strong></button>
+                                <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToCriarAdministarCampanha"><strong>Administrar Campanha</strong></button>
                             </div>
                         </div>
                     </div>
@@ -85,6 +85,7 @@
 
     private void NavigateToCriarAdministarCampanha()
     {
+        username = User.Email;
         NavigationManager.NavigateTo($"/administrar-campanha?email={username}");
     }
 
