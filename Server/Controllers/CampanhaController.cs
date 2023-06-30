@@ -16,10 +16,10 @@ namespace DoaseApp.Server.Controllers
             _repository = repository;
         }
 
-        [HttpGet("all")]
+        [HttpGet("GetAll")]
         public IEnumerable<Campanha> Get()
         {
-            return _repository.GetAll();
+            return _repository.GetAll().ToList();
         }
 
         [HttpGet("CampanhaByUser")]
@@ -29,7 +29,7 @@ namespace DoaseApp.Server.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] Campanha campanha)
+        public void Post(Campanha campanha)
         {
             _repository.AddCampanha(campanha);
         }

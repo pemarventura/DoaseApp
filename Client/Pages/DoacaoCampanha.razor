@@ -1,0 +1,71 @@
+﻿@page "/doacao-campanha"
+@inject NavigationManager NavigationManager
+@inject HttpClient httpClient
+@using DoaseApp.Shared.Classes;
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.WebUtilities;
+@using static Microsoft.AspNetCore.WebUtilities.QueryHelpers
+
+
+
+
+<h1 style="text-align:center;">@campanhaNome</h1>
+
+    
+    @if (Campanha != null && Campanha.DoacoesRequisitadas != null)
+    {
+        @foreach (var doacao in Campanha.DoacoesRequisitadas)
+        {
+            <div class="row">
+                <div class="col-md-6 border">
+                    <p>@doacao.Item?.NomeItem</p>
+                </div>
+                <div class="col-md-6 border">
+                    <div class="progress">
+                        @if (doacao.QuantidadePedida > 0)
+                        {
+                            var percentage = (doacao.QuantidadeArrecadada * 100) / doacao.QuantidadePedida;
+                            <div class="progress-bar" role="progressbar" style="width: @percentage.ToString("0")%">
+                                <span class="progress-bar-text">@percentage.ToString("0")%</span>
+                            </div>
+                            <span class="sr-only">@percentage.ToString("0")%</span>
+                        }
+                        else
+                        {
+                            <div class="progress-bar" role="progressbar" style="width: 0%">
+                                <span class="progress-bar-text">0%</span>
+                            </div>
+                            <span class="sr-only">0%</span>
+                        }
+                    </div>
+                    <div class="text-center">
+                        <p>@doacao.QuantidadeArrecadada / @doacao.QuantidadePedida</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+@code {
+
+    [Parameter] public string Email { get; set; }
+    public Person User { get; set; }
+    public Campanha Campanha { get; set; }
+    public string campanhaNome { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        var queryParameters = QueryHelpers.ParseQuery(uri.Query);
+        Email = queryParameters["email"];
+
+        await GetCampanhaByUser(Email);
+    }
+
+    private async Task GetCampanhaByUser(string email)
+    {
+        this.Campanha = await httpClient.GetFromJsonAsync<Campanha>($"api/campanha/CampanhaByUser?email={email}");
+
+        campanhaNome = this.Campanha.NomeCampanha;
+    }
+}
