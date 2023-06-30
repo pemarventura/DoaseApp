@@ -13,7 +13,7 @@
 <div class="container" style="background-color: white;">
     <div class="row">
         <div class="col-md-6 border">
-            <p>Nome</p>
+            <p>Item</p>
         </div>
         <div class="col-md-6 border">
             <p>Quantidade</p>
@@ -30,11 +30,31 @@
                     <p>@doacao.Item?.NomeItem</p>
                 </div>
                 <div class="col-md-6 border">
-                    <p>@doacao.QuantidadeArrecadada</p>
+                    <div class="progress">
+                        @if (doacao.QuantidadePedida > 0)
+                        {
+                            var percentage = (doacao.QuantidadeArrecadada * 100) / doacao.QuantidadePedida;
+                            <div class="progress-bar" role="progressbar" style="width: @percentage.ToString("0")%">
+                                <span class="progress-bar-text">@percentage.ToString("0")%</span>
+                            </div>
+                            <span class="sr-only">@percentage.ToString("0")%</span>
+                        }
+                        else
+                        {
+                            <div class="progress-bar" role="progressbar" style="width: 0%">
+                                <span class="progress-bar-text">0%</span>
+                            </div>
+                            <span class="sr-only">0%</span>
+                        }
+                    </div>
+                    <div class="text-center">
+                        <p>@doacao.QuantidadeArrecadada / @doacao.QuantidadePedida</p>
+                    </div>
                 </div>
             </div>
         }
     }
+
 
 </div>
 
