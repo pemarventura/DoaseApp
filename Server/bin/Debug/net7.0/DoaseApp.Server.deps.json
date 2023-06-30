@@ -14,7 +14,8 @@
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.0",
-          "Microsoft.AspNetCore.WebUtilities": "2.2.0"
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.JSInterop": "7.0.8"
         },
         "runtime": {
           "DoaseApp.Server.dll": {}
@@ -85,7 +86,7 @@
           "Microsoft.AspNetCore.Components": "7.0.4",
           "Microsoft.AspNetCore.Components.Forms": "7.0.4",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
-          "Microsoft.JSInterop": "7.0.4",
+          "Microsoft.JSInterop": "7.0.8",
           "System.IO.Pipelines": "7.0.0"
         },
         "runtime": {
@@ -213,17 +214,17 @@
         }
       },
       "Microsoft.Extensions.Primitives/7.0.0": {},
-      "Microsoft.JSInterop/7.0.4": {
+      "Microsoft.JSInterop/7.0.8": {
         "runtime": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.423.11903"
+            "fileVersion": "7.0.823.31807"
           }
         }
       },
       "Microsoft.JSInterop.WebAssembly/7.0.4": {
         "dependencies": {
-          "Microsoft.JSInterop": "7.0.4"
+          "Microsoft.JSInterop": "7.0.8"
         },
         "runtime": {
           "lib/net7.0/Microsoft.JSInterop.WebAssembly.dll": {
@@ -252,7 +253,8 @@
           "DoaseApp.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
-          "Microsoft.AspNetCore.WebUtilities": "2.2.0"
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.JSInterop": "7.0.8"
         },
         "runtime": {
           "DoaseApp.Client.dll": {}
@@ -263,7 +265,8 @@
           "Blazored.LocalStorage": "4.3.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
-          "Microsoft.AspNetCore.WebUtilities": "2.2.0"
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.JSInterop": "7.0.8"
         },
         "runtime": {
           "DoaseApp.Shared.dll": {}
@@ -452,12 +455,12 @@
       "path": "microsoft.extensions.primitives/7.0.0",
       "hashPath": "microsoft.extensions.primitives.7.0.0.nupkg.sha512"
     },
-    "Microsoft.JSInterop/7.0.4": {
+    "Microsoft.JSInterop/7.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FD8GFIz6RfZx+W8ljnXZ6g41xcqUqTvdRzafBHeXMqRbU3LQpKfoq5spJq+k/N1l0yL9TvQJXax1znpePxOI9w==",
-      "path": "microsoft.jsinterop/7.0.4",
-      "hashPath": "microsoft.jsinterop.7.0.4.nupkg.sha512"
+      "sha512": "sha512-/KQaTSSeZrOPMMR2nLeN991X7gZUSlxV31wM/ypwSuexGRgQ2IxsXY47TPP2cpuByMyw0qX7vhcoS927Dd/OLQ==",
+      "path": "microsoft.jsinterop/7.0.8",
+      "hashPath": "microsoft.jsinterop.7.0.8.nupkg.sha512"
     },
     "Microsoft.JSInterop.WebAssembly/7.0.4": {
       "type": "package",

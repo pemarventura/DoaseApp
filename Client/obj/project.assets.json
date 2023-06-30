@@ -436,7 +436,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.JSInterop/7.0.4": {
+      "Microsoft.JSInterop/7.0.8": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -555,7 +555,8 @@
           "Blazored.LocalStorage": "4.3.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
-          "Microsoft.AspNetCore.WebUtilities": "2.2.0"
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.JSInterop": "7.0.8"
         },
         "compile": {
           "bin/placeholder/DoaseApp.Shared.dll": {}
@@ -1000,7 +1001,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.JSInterop/7.0.4": {
+      "Microsoft.JSInterop/7.0.8": {
         "type": "package",
         "compile": {
           "lib/net7.0/Microsoft.JSInterop.dll": {
@@ -1113,7 +1114,8 @@
           "Blazored.LocalStorage": "4.3.0",
           "Microsoft.AspNetCore.Components.Authorization": "7.0.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.4",
-          "Microsoft.AspNetCore.WebUtilities": "2.2.0"
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.JSInterop": "7.0.8"
         },
         "compile": {
           "bin/placeholder/DoaseApp.Shared.dll": {}
@@ -1852,10 +1854,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.JSInterop/7.0.4": {
-      "sha512": "FD8GFIz6RfZx+W8ljnXZ6g41xcqUqTvdRzafBHeXMqRbU3LQpKfoq5spJq+k/N1l0yL9TvQJXax1znpePxOI9w==",
+    "Microsoft.JSInterop/7.0.8": {
+      "sha512": "/KQaTSSeZrOPMMR2nLeN991X7gZUSlxV31wM/ypwSuexGRgQ2IxsXY47TPP2cpuByMyw0qX7vhcoS927Dd/OLQ==",
       "type": "package",
-      "path": "microsoft.jsinterop/7.0.4",
+      "path": "microsoft.jsinterop/7.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1863,7 +1865,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.JSInterop.dll",
         "lib/net7.0/Microsoft.JSInterop.xml",
-        "microsoft.jsinterop.7.0.4.nupkg.sha512",
+        "microsoft.jsinterop.7.0.8.nupkg.sha512",
         "microsoft.jsinterop.nuspec"
       ]
     },
@@ -2066,23 +2068,24 @@
       "Microsoft.AspNetCore.Components.Authorization >= 7.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly >= 7.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 7.0.0",
-      "Microsoft.AspNetCore.WebUtilities >= 2.2.0"
+      "Microsoft.AspNetCore.WebUtilities >= 2.2.0",
+      "Microsoft.JSInterop >= 7.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PEMAR\\.nuget\\packages\\": {}
+    "C:\\Users\\paulo.emilio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Client\\DoaseApp.Client.csproj",
+      "projectUniqueName": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj",
       "projectName": "DoaseApp.Client",
-      "projectPath": "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Client\\DoaseApp.Client.csproj",
-      "packagesPath": "C:\\Users\\PEMAR\\.nuget\\packages\\",
-      "outputPath": "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Client\\obj\\",
+      "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj",
+      "packagesPath": "C:\\Users\\paulo.emilio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PEMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paulo.emilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2090,14 +2093,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\paulo.emilio\\Desktop\\Projetos\\Interno-Libs-Base": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
-              "projectPath": "D:\\PEMAR\\Desktop\\Projeto\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
+            "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
+              "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
             }
           }
         }
@@ -2132,6 +2136,10 @@
           "Microsoft.AspNetCore.WebUtilities": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Microsoft.JSInterop": {
+            "target": "Package",
+            "version": "[7.0.8, )"
           }
         },
         "imports": [
@@ -2148,7 +2156,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[7.0.0, 7.0.0]"
+            "version": "[7.0.3, 7.0.3]"
           }
         ],
         "frameworkReferences": {
@@ -2156,7 +2164,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
