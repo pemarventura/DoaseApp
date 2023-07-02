@@ -9,47 +9,35 @@
 
 @if (sucBuscarUsuario == true)
 {
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center flex-column">
         <h3>Olá, @User.FirstName!</h3>
-    </div>
 
-    <div>
-        <div class="d-flex flex-start align-items-center justify-content-around">
-            <div class="criar-campanha">
-                <div class="rectangle">
-                    <div class="inner-div">
-                        <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToCriarCampanha" disabled="@(User.TemCampanha ? true : false)"><strong>Criar Campanha</strong></button>
-                    </div>
-                </div>
+        <div class="d-flex flex-wrap justify-content-center mt-4">
+            <div class="card col-md-6 col-lg-4 mx-2 mb-3">
+                <button type="button" class="btn btn-primary btn-block btn-lg px-4 py-3" @onclick="@NavigateToCriarCampanha" disabled="@(User.TemCampanha ? true : false)">
+                    <strong>Criar Campanha</strong>
+                </button>
             </div>
 
-            <div>
-                <div class="d-flex justify-content-center">
-                    <div class="criar-campanha">
-                        <div class="rectangle">
-                            <div class="inner-div">
-                                @*ADICIONAR ESTA VALIDACAO DEPOIS*@
-                                <button type="button" class="btn btn-primary mx-2" @onclick="@NavigateToCriarAdministarCampanha"><strong>Administrar Campanha</strong></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="card col-md-6 col-lg-4 mx-2 mb-3">
+                <!-- ADICIONAR ESTA VALIDACAO DEPOIS -->
+                <button type="button" class="btn btn-primary btn-block btn-lg px-4 py-3" @onclick="@NavigateToCriarAdministarCampanha">
+                    <strong>Administrar Campanha</strong>
+                </button>
             </div>
 
-            <div class="criar-campanha">Bloco3</div>
         </div>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <button @onclick="NavigateToLoginPage" class="btn btn-secondary btn-lg">Voltar para página de Login</button>
     </div>
+
 }
 
-
-<p>Email: @Email</p>
-<p>Password: @Password</p>
-
-<p>teste: @User?.Email</p>
-
-<p>teste: @User?.TemCampanha</p>
-
-<button @onclick="NavigateToLoginPage">Go Back to Login Page</button>
 
 @code {
     [Parameter] public string Email { get; set; }

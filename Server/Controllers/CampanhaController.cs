@@ -33,5 +33,11 @@ namespace DoaseApp.Server.Controllers
         {
             _repository.AddCampanha(campanha);
         }
+
+        [HttpPost("UpdateCampanha")]
+        public void PostUpdate([FromBody]Campanha campanha) 
+        {
+            _repository.UpdateCampanha(campanha);
+        }
     }
 }

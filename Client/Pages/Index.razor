@@ -8,8 +8,6 @@
   <img src="images/doase.png" alt="Logo">
 </div>
 
-<h1>Login</h1>
-
 @if (errorMessage != null)
 {
     <div class="alert alert-danger" role="alert">
@@ -19,8 +17,10 @@
 
 @if (!loginSuccessfull && intermediateLoginBox == false)
 {
+    <h1>Login</h1>
+
     <div class="form-group">
-        <label for="username">Username:</label>
+        <label for="username">Email:</label>
         <input type="text" class="form-control" id="username" @bind-value="username">
     </div>
 

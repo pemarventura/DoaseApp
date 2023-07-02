@@ -12,5 +12,6 @@ namespace DoaseApp.Shared
         IEnumerable<Campanha> GetAll();
         Campanha GetCampanhaByUser(string email);
         void AddCampanha(Campanha campanha);
+        void UpdateCampanha(Campanha campanha);
     }
 }

@@ -21,11 +21,12 @@
             <InputText class="form-control" id="nomeCampanha" placeholder="De um nome para a campanha..." @bind-Value="@campanha.NomeCampanha" />
         </div>
         <div class="mb-3">
-            <label for="objetivos" class="form-label">Descricao: </label>
+            <label for="objetivos" class="form-label">Descrição: </label>
             <InputTextArea class="form-control" id="objetivos" placeholder="Descreva a quem e como essa campanha beneficiara..." @bind-Value="@campanha.Objetivos" />
         </div>
 
-        <h4>Selecione quais os itens e quantidades arrecadados pela campanha: </h4>
+        <h4 class="mb-4">Selecione quais os itens e quantidades arrecadados pela campanha:</h4>
+
 
         <div class="row justify-content-center">
             <div class="col-3">
@@ -102,7 +103,11 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Create Campanha</button>
+        <div class="d-flex justify-content-center align-items-center mt-4">
+            <button type="submit" class="btn btn-primary">Criar Campanha</button>
+        </div>
+
+
     </EditForm>
 
 }

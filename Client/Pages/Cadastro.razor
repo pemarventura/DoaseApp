@@ -241,20 +241,6 @@
     </div>
 }
 
-
-@if (persons != null && persons.Any())
-{
-    <h2>Nomes Cadastrados:</h2>
-    <ul>
-        @foreach (var person in persons)
-        {
-            <li>@($"{person.Email} - {person.Senha}")</li>
-        }
-    </ul>
-}
-
-<button type="button" class="btn btn-secondary" @onclick="@GetAll" style="margin-top: 10px;">Mostrar Nomes</button>
-
 @code {
     private Person person = new Person();
     public bool isSubmitted = false;

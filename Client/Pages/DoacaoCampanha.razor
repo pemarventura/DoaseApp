@@ -11,76 +11,92 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha384-Koiv2BdOqjJbqBdXrx2Z6Pm6TE1z6tjfmK0Ey9ixFx2FuPfEmO4UL9CDWJ+0jJKC" crossorigin="anonymous">
 
-<h1 style="text-align:center;">@campanhaNome</h1>
+@if (!mostrarRevisao)
+{
+    <h1 style="text-align:center;">Realizar Doacao</h1>
+    <p></p>
+    <h1 style="text-align:center;"> @campanhaNome</h1>
 
-<div class="container" style="background-color: white;">
-    <div class="row">
-        <div class="col-md-6 border">
-            <p>Item</p>
+    <div class="container" style="background-color: white;">
+        <div class="row">
+            <div class="col-md-6 border">
+                <p>Item: </p>
+            </div>
+            <div class="col-md-4 border">
+                <p>Quantidade Pedida: </p>
+            </div>
+            <div class="col-md-2 border">
+                <p>Quantidade a doar: </p>
+            </div>
         </div>
-        <div class="col-md-6 border">
-            <p>Quantidade</p>
-        </div>
-    </div>
 
-    @if (Campanha != null && Campanha.DoacoesRequisitadas != null)
-    {
-        @foreach (var doacao in Campanha.DoacoesRequisitadas)
+        @if (Campanha != null && Campanha.DoacoesRequisitadas != null)
         {
-            <div class="row">
-                <div class="col-md-6 border">
-                    <p>@doacao.Item?.NomeItem</p>
-                </div>
-                <div class="col-md-6 border">
-                    <div class="progress">
-                        @if (doacao.QuantidadePedida > 0)
-                        {
-                            var percentage = (doacao.QuantidadeArrecadada * 100) / doacao.QuantidadePedida;
-                            <div class="progress-bar" role="progressbar" style="width: @percentage.ToString("0")%"></div>
-                            <span class="progress-bar-text">@percentage.ToString("0")%</span>
-                        }
-                        else
-                        {
-                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
-                            <span class="progress-bar-text">0%</span>
-                        }
+            @foreach (var doacao in Campanha.DoacoesRequisitadas)
+            {
+                <div class="row">
+                    <div class="col-md-6 border">
+                        <p>@doacao.Item?.NomeItem</p>
                     </div>
-                    <div class="text-center">
-                        <p>@doacao.QuantidadeArrecadada / @doacao.QuantidadePedida</p>
+                    <div class="col-md-4 border">
+                        <div class="progress">
+                            @if (doacao.QuantidadePedida > 0)
+                            {
+                                var percentage = (doacao.QuantidadeArrecadada * 100) / doacao.QuantidadePedida;
+                                <div class="progress-bar" role="progressbar" style="width: @percentage.ToString("0")%"></div>
+                                <span class="progress-bar-text">@percentage.ToString("0")%</span>
+                            }
+                            else
+                            {
+                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                <span class="progress-bar-text">0%</span>
+                            }
+                        </div>
+                        <div class="text-center">
+                            <p>@doacao.QuantidadeArrecadada / @doacao.QuantidadePedida</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 border">
+                        <input type="number" class="form-control" @bind="@doacao.QuantidadeArrecadada" />
                     </div>
                 </div>
-            </div>
+            }
         }
-    }
 
-    <div class="mt-4 text-center">
-        <button type="submit" class="btn btn-info btn-lg w-100 text-light" style="margin-top: 10px;">Submit</button>
+        <div class="mt-4 text-center">
+            <button type="submit" class="btn btn-info btn-lg w-100 text-light" style="margin-top: 10px;" @onclick="ShowRevisao">Do@r!</button>
+        </div>
+
     </div>
-</div>
+}
 
-<!-- Button to trigger the modal -->
-<button type="button" class="btn btn-primary" @onclick="ShowModal">Open Modal</button>
+else
+{
+    <div class="d-flex justify-content-center">
+        <div class="card bg-light p-5">
+            <div class="card-body d-flex flex-column align-items-center">
+                <p>Revise as informações antes de prosseguir!</p>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="myModalTitle">Modal Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Modal content goes here...</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                @if (Campanha != null && Campanha.DoacoesRequisitadas != null)
+                {
+                    @foreach (var doacao in Campanha.DoacoesRequisitadas)
+                    {
+                        <div class="d-flex justify-content-between my-2">
+                            <p>@doacao.Item?.NomeItem : @doacao.QuantidadeArrecadada</p>
+                        </div>
+                    }
+                }
+
+                <div class="d-flex justify-content-between mb-8">
+                    <button type="button" class="btn btn-warning mx-2" @onclick="Voltar">Voltar</button>
+                    <button type="button" class="btn btn-primary mx-2" @onclick="UpdateCampanha">Finalizar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+}
+
 
 @code {
 
@@ -88,7 +104,7 @@
     public Person User { get; set; }
     public Campanha Campanha { get; set; }
     public string campanhaNome { get; set; }
-    private bool mostrarModal { get; set; } = false;
+    private bool mostrarRevisao { get; set; } = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -102,13 +118,24 @@
     private async Task GetCampanhaByUser(string email)
     {
         this.Campanha = await httpClient.GetFromJsonAsync<Campanha>($"api/campanha/CampanhaByUser?email={email}");
-
         campanhaNome = this.Campanha.NomeCampanha;
     }
 
-    private async Task ShowModal()
+    private void ShowRevisao()
     {
-        mostrarModal = true;
-        await JSRuntime.InvokeVoidAsync("$('#myModal').modal', 'show')");
+        this.mostrarRevisao = true;
+    }
+
+    private void Voltar()
+    {
+        this.mostrarRevisao = false;
+    }
+
+    private async Task UpdateCampanha()
+    {
+        await httpClient.PostAsJsonAsync("api/campanha/UpdateCampanha", Campanha);
+
+        mostrarRevisao = false;
+        OnInitializedAsync();
     }
 }
