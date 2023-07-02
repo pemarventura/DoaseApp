@@ -13,20 +13,20 @@
 
 @if (!mostrarRevisao)
 {
-    <h1 style="text-align:center;">Realizar Doacao</h1>
+    <h1 style="text-align:center;">Realizar Doacão</h1>
     <p></p>
     <h1 style="text-align:center;"> @campanhaNome</h1>
 
-    <div class="container" style="background-color: white;">
+    <div style="background-color: white;">
         <div class="row">
-            <div class="col-md-6 border">
-                <p>Item: </p>
+            <div class="col-4 col-md-3 border">
+                <p>Item:</p>
             </div>
-            <div class="col-md-4 border">
-                <p>Quantidade Pedida: </p>
+            <div class="col-4 col-md-4 border">
+                <p>Quantidade Pedida:</p>
             </div>
-            <div class="col-md-2 border">
-                <p>Quantidade a doar: </p>
+            <div class="col-4 col-md-5 border">
+                <p>Quantidade a doar:</p>
             </div>
         </div>
 
@@ -35,10 +35,10 @@
             @foreach (var doacao in Campanha.DoacoesRequisitadas)
             {
                 <div class="row">
-                    <div class="col-md-6 border">
+                    <div class="col-4 col-md-3 border">
                         <p>@doacao.Item?.NomeItem</p>
                     </div>
-                    <div class="col-md-4 border">
+                    <div class="col-4 col-md-4 border">
                         <div class="progress">
                             @if (doacao.QuantidadePedida > 0)
                             {
@@ -56,7 +56,7 @@
                             <p>@doacao.QuantidadeArrecadada / @doacao.QuantidadePedida</p>
                         </div>
                     </div>
-                    <div class="col-md-2 border">
+                    <div class="col-4 col-md-5 border">
                         <input type="number" class="form-control" @bind="@doacao.QuantidadeArrecadada" />
                     </div>
                 </div>
@@ -66,8 +66,9 @@
         <div class="mt-4 text-center">
             <button type="submit" class="btn btn-info btn-lg w-100 text-light" style="margin-top: 10px;" @onclick="ShowRevisao">Do@r!</button>
         </div>
-
     </div>
+
+
 }
 
 else
