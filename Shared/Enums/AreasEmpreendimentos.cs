@@ -31,6 +31,9 @@ namespace DoaseApp.Shared.Enums
         Logistica,
 
         [Description("Serviços Sociais")]
-        ServicosSociais
+        ServicosSociais,
+
+        [Description("Outros")]
+        Outros
     }
 }

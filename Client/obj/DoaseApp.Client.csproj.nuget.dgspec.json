@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj": {}
+    "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj": {
+    "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj",
+        "projectUniqueName": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj",
         "projectName": "DoaseApp.Client",
-        "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj",
-        "packagesPath": "C:\\Users\\paulo.emilio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\obj\\",
+        "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj",
+        "packagesPath": "C:\\Users\\PEMAR\\.nuget\\packages\\",
+        "outputPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\paulo.emilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PEMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\paulo.emilio\\Desktop\\Projetos\\Interno-Libs-Base": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
-                "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
+              "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
+                "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
               }
             }
           }
@@ -85,7 +84,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.3, 7.0.3]"
+              "version": "[7.0.7, 7.0.7]"
             }
           ],
           "frameworkReferences": {
@@ -93,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -102,17 +101,17 @@
         }
       }
     },
-    "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
+    "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
+        "projectUniqueName": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
         "projectName": "DoaseApp.Shared",
-        "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
-        "packagesPath": "C:\\Users\\paulo.emilio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\obj\\",
+        "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\PEMAR\\.nuget\\packages\\",
+        "outputPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\paulo.emilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PEMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,7 +119,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\paulo.emilio\\Desktop\\Projetos\\Interno-Libs-Base": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -176,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

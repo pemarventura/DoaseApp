@@ -1438,19 +1438,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paulo.emilio\\.nuget\\packages\\": {}
+    "C:\\Users\\PEMAR\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Server\\DoaseApp.Server.csproj",
+      "projectUniqueName": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Server\\DoaseApp.Server.csproj",
       "projectName": "DoaseApp.Server",
-      "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Server\\DoaseApp.Server.csproj",
-      "packagesPath": "C:\\Users\\paulo.emilio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Server\\obj\\",
+      "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Server\\DoaseApp.Server.csproj",
+      "packagesPath": "C:\\Users\\PEMAR\\.nuget\\packages\\",
+      "outputPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\paulo.emilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PEMAR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1458,18 +1458,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\paulo.emilio\\Desktop\\Projetos\\Interno-Libs-Base": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj": {
-              "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Client\\DoaseApp.Client.csproj"
+            "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj": {
+              "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Client\\DoaseApp.Client.csproj"
             },
-            "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
-              "projectPath": "C:\\Users\\paulo.emilio\\Desktop\\Doase\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
+            "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj": {
+              "projectPath": "D:\\PEMAR\\Desktop\\Teste\\DoaseApp\\Shared\\DoaseApp.Shared.csproj"
             }
           }
         }
@@ -1528,7 +1528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -20,13 +20,12 @@
             </div>
 
             <div class="card col-md-6 col-lg-4 mx-2 mb-3">
-                <!-- ADICIONAR ESTA VALIDACAO DEPOIS -->
-                <button type="button" class="btn btn-primary btn-block btn-lg px-4 py-3" @onclick="@NavigateToCriarAdministarCampanha">
+                <button type="button" class="btn btn-primary btn-block btn-lg px-4 py-3" @onclick="@NavigateToCriarAdministarCampanha" disabled="@(User.TemCampanha ? false : true)">
                     <strong>Administrar Campanha</strong>
                 </button>
             </div>
-
         </div>
+
 
         <p></p>
         <p></p>
