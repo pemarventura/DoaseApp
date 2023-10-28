@@ -30,7 +30,7 @@ Para rodar o projeto em sua máquina, são necessários os seguintes pré-requis
     </li>
 </ul>
 
-<p> Após as intalações necessárias, execute o projeto e, na aba de Ferramentas, na opção de Gerenciar Pacotes NuGet, o Visual Studio reconhecerá as bibliotecas necessárias para execução, conforme a imagem: </p>
+<p> Após as intalações necessárias, execute o projeto e, na aba de Ferramentas, na opção de Gerenciar Pacotes NuGet, o Visual Studio reconhecerá as bibliotecas necessárias para execução, instale-as conforme a imagem: </p>
 
 ![Dependências](./Imagens/Dependências.png)
 
