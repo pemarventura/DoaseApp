@@ -70,7 +70,7 @@ Para rodar o projeto em sua máquina, são necessários os seguintes pré-requis
 <p> 
 Este software é distribuído sob os termos da Licença BSD (Berkeley Software Distribution).
 
-**Licença BSD (Berkeley Software Distribution)**: A Licença BSD é uma licença de código aberto permissiva amplamente usada que permite que você use, modifique e distribua o código-fonte e o software, tanto em projetos comerciais quanto de código aberto. Ela é conhecida por sua simplicidade e flexibilidade. A licença BSD geralmente requer que você dê créditos aos autores originais e inclua um aviso de direitos autorais ao redistribuir o software. Ela não impõe restrições significativas sobre o uso ou distribuição, tornando-a uma escolha popular para projetos de código aberto.
+**Licença BSD (Berkeley Software Distribution)**: A Licença BSD é uma licença de código aberto permissiva amplamente usada que permite que você use, modifique e distribua o código-fonte e o software, tanto em projetos comerciais quanto de código aberto. Ela é conhecida por sua simplicidade e flexibilidade. Esta licença requer que você dê créditos aos autores originais e inclua um aviso de direitos autorais ao redistribuir o software. Ela não impõe restrições significativas sobre o uso ou distribuição..
 </p>
 
 
