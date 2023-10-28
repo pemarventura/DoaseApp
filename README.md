@@ -1,7 +1,7 @@
 <h1 align="center"> # Do.@-se App </h1>
 
 <p align="center">
-  <img width="460" height="300" src="./Imagens/doase.png">
+  <img width="460" height="250" src="./Imagens/doase.png">
 </p>
 
 <h2>1. Justificativa:</h2>
@@ -20,6 +20,7 @@ A solução Do.@-se foi pensada e criada para ser um aplicativo no qual pessoas 
 
 <p>
 Para rodar o projeto em sua máquina, são necessários os seguintes pré-requisitos:
+  
 <ul>
     <li style="display: inline-block;">
         <strong>Requisito 1:</strong> Instalar o <a href="https://visualstudio.microsoft.com/pt-br/downloads/">Visual Studio 2022</a>
@@ -35,7 +36,35 @@ Para rodar o projeto em sua máquina, são necessários os seguintes pré-requis
 
 <p> Concluídas as operações acima, já é possível rodar o projeto: </p>
 
+<p align="center">
+  <img width="320" height="480" src="./Imagens/Inicial.png" height= 100>
+</p>
 
+<p>Pronto! Agora é possível utilizar o aplicativo!</p>
+
+<p><strong>As credenciais admin são:</strong></p>
+
+<ul>
+    <li style="display: inline-block;">
+        <strong>Login:</strong> 1</a>
+    </li>
+     <li style="display: inline-block;">
+        <strong>Senha:</strong> 1</a>
+    </li>
+</ul>
+
+<h2>4. Documentações:</h2>
+
+<p>Durante a idealização e planejamento do projeto foram elaboradas algumas documentações, aqui estão as principais </p>
+
+<ul>
+    <li style="display: inline-block;">
+        <strong><a href="Apresentação em Power Point referente ao projeto de negócios, justificativas de mercado e ideias de implementações inciais:</strong>
+    </li>
+     <li style="display: inline-block;">
+        <strong>Requisito 2:</strong> Instalar a <a href="https://dotnet.microsoft.com/pt-br/download/dotnet/7.0">.NET Framework SDK 7.0.13 </a>
+    </li>
+</ul>
 
 
 
