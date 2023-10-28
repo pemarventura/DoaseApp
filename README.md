@@ -96,6 +96,10 @@ Além disso, incorporamos tecnologias web fundamentais, como JavaScript, CSS, HT
 
 Essa abordagem arquitetônica permite uma clara separação de preocupações e facilita a manutenção e a escalabilidade do nosso aplicativo. Os modelos no .Shared gerenciam os dados, as controllers no .Server controlam a lógica de negócios e as páginas e estilizações no .Client garantem uma experiência de usuário rica e responsiva.
 
+<p align="center">
+  <img width="341" height="869" src="./Imagens/Arquitetura.png">
+</p>
+
 </p>
 
 <h2>7. Licença: </h2>
