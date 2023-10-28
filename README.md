@@ -66,7 +66,39 @@ Para rodar o projeto em sua máquina, são necessários os seguintes pré-requis
     </li>
 </ul>
 
-<h2>5. Licença: </h2>
+<h2>5. Tecnologias: </h2>
+<p>
+Sobre o Aplicativo PWA
+
+Nosso aplicativo PWA (Progressive Web App) foi desenvolvido utilizando um conjunto de tecnologias avançadas para proporcionar uma experiência de usuário eficiente e moderna. Este aplicativo combina a potência do C# e do .NET com a versatilidade do Blazor, Razor Pages e a arquitetura MVC para criar uma solução web robusta e flexível.
+
+- **C# e .NET**: Utilizamos a linguagem de programação C# e a plataforma .NET para o desenvolvimento do back-end, permitindo um código seguro, eficiente e de alto desempenho.
+
+- **Blazor e WebAssembly**: A estrutura Blazor nos permitiu criar interfaces de usuário dinâmicas e interativas usando C# e .NET, com a execução direta no navegador dos usuários, graças ao WebAssembly. Isso proporciona uma experiência de desenvolvimento mais produtiva e simplificada.
+
+- **Razor Pages**: As Razor Pages são usadas para criar páginas da web de forma modular e reutilizável, facilitando o desenvolvimento e a manutenção do aplicativo.
+
+- **Arquitetura MVC (Model-View-Controller)**: A arquitetura MVC é empregada para organizar o código e a lógica do aplicativo, tornando-o mais escalável e de fácil manutenção.
+
+Além disso, incorporamos tecnologias web fundamentais, como JavaScript, CSS e HTML, para aprimorar a experiência do usuário e garantir que o aplicativo funcione perfeitamente em navegadores e dispositivos modernos.
+
+</p>
+
+<h2>6. Arquitetura: </h2>
+<p>
+  Nosso aplicativo segue a arquitetura MVC (Model-View-Controller) para organizar e estruturar o código de forma eficiente e escalável. A arquitetura MVC divide a aplicação em três componentes principais:
+
+    - **Model (Modelo)**: O Modelo representa a camada de dados da nossa aplicação. É responsável por gerenciar a lógica de negócios, a manipulação de dados e a comunicação com o banco de dados. No nosso caso, a pasta .Shared é usada para armazenar os modelos de dados e os repositórios, permitindo uma separação clara da camada de dados da lógica de negócios.
+
+    - **View (Visualização)**: A Camada de Visualização é responsável pela apresentação e exibição de dados aos usuários. As páginas e estilizações do nosso aplicativo são armazenadas na pasta .Client, o que inclui as interfaces de usuário, os componentes Blazor e os recursos visuais que os usuários veem e interagem no navegador.
+
+    - **Controller (Controlador)**: O Controlador lida com a lógica de controle e atua como intermediário entre o Modelo e a Visualização. Nas páginas do nosso aplicativo, a pasta .Server contém as controllers responsáveis por receber solicitações do cliente, processar a lógica do servidor e retornar dados para a Visualização. Isso ajuda a manter a separação de responsabilidades e a garantir que a aplicação seja escalável.
+
+Essa abordagem arquitetônica permite uma clara separação de preocupações e facilita a manutenção e a escalabilidade do nosso aplicativo. Os modelos no .Shared gerenciam os dados, as controllers no .Server controlam a lógica de negócios e as páginas e estilizações no .Client garantem uma experiência de usuário rica e responsiva.
+
+</p>
+
+<h2>7. Licença: </h2>
 <p> 
 Este software é distribuído sob os termos da Licença BSD (Berkeley Software Distribution).
 
